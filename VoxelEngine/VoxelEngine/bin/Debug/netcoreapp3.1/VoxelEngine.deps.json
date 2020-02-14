@@ -1,0 +1,81 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "VoxelEngine/1.0.0": {
+        "dependencies": {
+          "OpenToolkit.Core": "4.0.0.0",
+          "OpenToolkit.Graphics": "1.0.0.0",
+          "OpenToolkit.GraphicsLibraryFramework": "4.0.0.0",
+          "OpenToolkit.Mathematics": "4.0.0.0"
+        },
+        "runtime": {
+          "VoxelEngine.dll": {}
+        }
+      },
+      "OpenToolkit.Core/4.0.0.0": {
+        "runtime": {
+          "OpenToolkit.Core.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
+      "OpenToolkit.Graphics/1.0.0.0": {
+        "runtime": {
+          "OpenToolkit.Graphics.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "OpenToolkit.GraphicsLibraryFramework/4.0.0.0": {
+        "runtime": {
+          "OpenToolkit.GraphicsLibraryFramework.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      },
+      "OpenToolkit.Mathematics/4.0.0.0": {
+        "runtime": {
+          "OpenToolkit.Mathematics.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "VoxelEngine/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OpenToolkit.Core/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OpenToolkit.Graphics/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OpenToolkit.GraphicsLibraryFramework/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OpenToolkit.Mathematics/4.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

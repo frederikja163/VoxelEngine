@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <PlatformTarget>AnyCPU</PlatformTarget>
+      <Prefer32bit>false</Prefer32bit>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="OpenToolkit.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>D:\Projects\OpenTK\opentk\src\OpenToolkit.Graphics\bin\Release\netstandard2.0\OpenToolkit.Core.dll</HintPath>
+      </Reference>
+      <Reference Include="OpenToolkit.Graphics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>D:\Projects\OpenTK\opentk\src\OpenToolkit.Graphics\bin\Release\netstandard2.0\OpenToolkit.Graphics.dll</HintPath>
+      </Reference>
+      <Reference Include="OpenToolkit.GraphicsLibraryFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>D:\Projects\OpenTK\opentk\src\Windowing\OpenToolkit.GraphicsLibraryFramework\bin\Release\netcoreapp3.0\OpenToolkit.GraphicsLibraryFramework.dll</HintPath>
+      </Reference>
+      <Reference Include="OpenToolkit.Mathematics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>D:\Projects\OpenTK\opentk\src\OpenToolkit.Graphics\bin\Release\netstandard2.0\OpenToolkit.Mathematics.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Assets\fragment.glsl">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Assets\vertex.glsl">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>

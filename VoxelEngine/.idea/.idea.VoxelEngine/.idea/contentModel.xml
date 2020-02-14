@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\fjapl\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\fjapl\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_VoxelEngine.-2081414862.00" t="ExcludeRecursive" />
+    <e p="C:\Users\fjapl\Documents\projects\VoxelEngine\VoxelEngine" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="VoxelEngine" t="IncludeRecursive">
+        <e p="AppData.cs" t="Include" />
+        <e p="Application.cs" t="Include" />
+        <e p="Assets" t="Include">
+          <e p="fragment.glsl" t="Include" />
+          <e p="vertex.glsl" t="Include" />
+        </e>
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Layers" t="Include">
+          <e p="ILayer.cs" t="Include" />
+          <e p="LayerManager.cs" t="Include" />
+          <e p="TestLayer.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="VoxelEngine.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Platforms" t="Include">
+          <e p="Glfw" t="Include">
+            <e p="GlfwInput.cs" t="Include" />
+            <e p="GlfwPlatform.cs" t="Include" />
+            <e p="GlfwWindow.cs" t="Include" />
+          </e>
+          <e p="IInput.cs" t="Include" />
+          <e p="IPlatform.cs" t="Include" />
+          <e p="IWindow.cs" t="Include" />
+          <e p="Platform.cs" t="Include" />
+          <e p="PlatformApi.cs" t="Include" />
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Rendering" t="Include">
+          <e p="IIndexBuffer.cs" t="Include" />
+          <e p="IRenderer.cs" t="Include" />
+          <e p="IShader.cs" t="Include" />
+          <e p="IVertexArray.cs" t="Include" />
+          <e p="IVertexBuffer.cs" t="Include" />
+          <e p="Layout.cs" t="Include" />
+          <e p="LayoutItem.cs" t="Include" />
+          <e p="LayoutType.cs" t="Include" />
+          <e p="OpenGl" t="Include">
+            <e p="GlIndexBuffer.cs" t="Include" />
+            <e p="GlRenderer.cs" t="Include" />
+            <e p="GlShader.cs" t="Include" />
+            <e p="GlVertexArray.cs" t="Include" />
+            <e p="GlVertexBuffer.cs" t="Include" />
+          </e>
+          <e p="Renderer.cs" t="Include" />
+          <e p="RenderingApi.cs" t="Include" />
+        </e>
+        <e p="VoxelEngine.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="VoxelEngine.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>
