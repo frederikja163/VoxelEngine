@@ -6,11 +6,11 @@ namespace VoxelEngine.Platforms
 {
     public static class Platform
     {
-        public static IPlatform CreatePlatform(PlatformApi platformApi)
+        public static IWindow CreateWindow(PlatformApi platformApi)
         {
             return platformApi switch
             {
-                PlatformApi.GlfwDesktop => new GlfwPlatform(),
+                PlatformApi.GlfwDesktop => new GlfwWindow(),
                 _ => throw new ArgumentOutOfRangeException(nameof(platformApi), platformApi, null)
             };
         }

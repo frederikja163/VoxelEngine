@@ -26,19 +26,22 @@
           </e>
         </e>
         <e p="Platforms" t="Include">
+          <e p="BaseInput.cs" t="Include" />
           <e p="Glfw" t="Include">
             <e p="GlfwInput.cs" t="Include" />
-            <e p="GlfwPlatform.cs" t="Include" />
             <e p="GlfwWindow.cs" t="Include" />
           </e>
           <e p="IInput.cs" t="Include" />
-          <e p="IPlatform.cs" t="Include" />
           <e p="IWindow.cs" t="Include" />
+          <e p="Key.cs" t="Include" />
+          <e p="KeyState.cs" t="Include" />
+          <e p="MouseButton.cs" t="Include" />
           <e p="Platform.cs" t="Include" />
           <e p="PlatformApi.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Rendering" t="Include">
+          <e p="Camera.cs" t="Include" />
           <e p="IIndexBuffer.cs" t="Include" />
           <e p="IRenderer.cs" t="Include" />
           <e p="IShader.cs" t="Include" />
@@ -56,6 +59,7 @@
           </e>
           <e p="Renderer.cs" t="Include" />
           <e p="RenderingApi.cs" t="Include" />
+          <e p="Transform.cs" t="Include" />
         </e>
         <e p="VoxelEngine.csproj" t="IncludeRecursive" />
       </e>

@@ -1,11 +1,12 @@
 ﻿using System.Drawing;
+using OpenToolkit;
 using VoxelEngine.Platforms;
 
 namespace VoxelEngine.Rendering
 {
     public interface IRenderer
     {
-        public void LoadBindings(IPlatform context);
+        public void LoadBindings(IBindingsContext context);
         
         public Color ClearColor { get; set; }
 

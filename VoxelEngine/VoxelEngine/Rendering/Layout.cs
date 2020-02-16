@@ -1,6 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Reflection;
+using OpenToolkit.Mathematics;
+using Vector2 = System.Numerics.Vector2;
+using Vector3 = System.Numerics.Vector3;
+using Vector4 = System.Numerics.Vector4;
 
 namespace VoxelEngine.Rendering
 {
@@ -15,16 +21,63 @@ namespace VoxelEngine.Rendering
         }
         
         public IShader Shader { get; }
+
+        public static Layout GenerateFrom<TType>(IShader shader)
+        {
+            Layout layout = new Layout(shader);
+            layout._items.AddRange(GetLayoutItems(typeof(TType)));
+            return layout;
+        }
+
+        private static LayoutItem[] GetLayoutItems(Type type)
+        {
+            List<LayoutItem> items = new List<LayoutItem>();
+            FieldInfo[] fields = type.GetFields();
+            for (int i = 0; i < fields.Length; i++)
+            {
+                int count = 1;
+                if (fields[i].FieldType.IsArray)
+                {
+                    count = ((Array) fields[i].GetValue(null)).Length;
+                }
+                
+                try
+                {
+                    items.Add(new LayoutItem(fields[i].Name, GetLayoutTypeOf(fields[i].FieldType), count));
+                }
+                catch (ArgumentOutOfRangeException e)
+                {
+                    if (fields[i].FieldType == typeof(Vector2))
+                    {
+                        items.Add(new LayoutItem(fields[i].Name, LayoutType.Float, count * 2));
+                    }
+                    else if (fields[i].FieldType == typeof(Vector3))
+                    {
+                        items.Add(new LayoutItem(fields[i].Name, LayoutType.Float, count * 3));
+                    }
+                    else if (fields[i].FieldType == typeof(Vector4) || fields[i].FieldType == typeof(Color4))
+                    {
+                        items.Add(new LayoutItem(fields[i].Name, LayoutType.Float, count * 4));
+                    }
+                    else
+                    {
+                        items.AddRange(GetLayoutItems(fields[i].FieldType));
+                    }
+                }
+            }
+
+            return items.ToArray();
+        }
         
         public Layout AddItem<TType>(string attributeName, int count = 1)
             where TType : unmanaged
         {
-            return AddItem(LayoutItem.CreateLayoutItem(attributeName, GetLayoutTypeOf<TType>(), count));
+            return AddItem(new LayoutItem(attributeName, GetLayoutTypeOf<TType>(), count));
         }
         
         public Layout AddItem(string attributeName, LayoutType type, int count = 1)
         {
-            return AddItem(LayoutItem.CreateLayoutItem(attributeName, type, count));
+            return AddItem(new LayoutItem(attributeName, type, count));
         }
         
         public Layout AddItem(LayoutItem item)
@@ -54,16 +107,21 @@ namespace VoxelEngine.Rendering
         public static LayoutType GetLayoutTypeOf<TType>()
             where TType : unmanaged
         {
+            return GetLayoutTypeOf(typeof(TType));
+        }
+        
+        private static LayoutType GetLayoutTypeOf(Type type)
+        {
             return
-                (typeof(TType) == typeof(float)) ? LayoutType.Float :
-                (typeof(TType) == typeof(double)) ? LayoutType.Double :
-                (typeof(TType) == typeof(sbyte)) ? LayoutType.SByte :
-                (typeof(TType) == typeof(byte)) ? LayoutType.UByte :
-                (typeof(TType) == typeof(short)) ? LayoutType.SShort :
-                (typeof(TType) == typeof(ushort)) ? LayoutType.UShort :
-                (typeof(TType) == typeof(int)) ? LayoutType.SInt :
-                (typeof(TType) == typeof(uint)) ? LayoutType.UInt :
-                throw new ArgumentOutOfRangeException(nameof(TType), typeof(TType), null);
+                (type == typeof(float)) ? LayoutType.Float :
+                (type == typeof(double)) ? LayoutType.Double :
+                (type == typeof(sbyte)) ? LayoutType.SByte :
+                (type == typeof(byte)) ? LayoutType.UByte :
+                (type == typeof(short)) ? LayoutType.SShort :
+                (type == typeof(ushort)) ? LayoutType.UShort :
+                (type == typeof(int)) ? LayoutType.SInt :
+                (type == typeof(uint)) ? LayoutType.UInt :
+                throw new ArgumentOutOfRangeException(nameof(type), type, null);
         }
 
         public static Type GetTypeOf(LayoutType type)

@@ -11,16 +11,11 @@ namespace VoxelEngine.Rendering
         public int Count { get; }
         
         
-        private LayoutItem(string attribName, LayoutType type, int count)
+        public LayoutItem(string attribName, LayoutType type, int count)
         {
             AttributeName = attribName;
             Count = count;
             Type = type;
-        }
-
-        public static LayoutItem CreateLayoutItem(string attributeName, LayoutType type, int count)
-        {
-            return new LayoutItem(attributeName, type, count);
         }
     }
 }

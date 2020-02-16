@@ -17,8 +17,8 @@ namespace VoxelEngine.Rendering.OpenGl
                 int shader = GL.CreateShader(type);
                 GL.ShaderSource(shader, File.ReadAllText(path));
                 GL.CompileShader(shader);
-                GL.GetShader(shader, ShaderParameter.InfoLogLength, out int length);
-                if (length != 0)
+                GL.GetShaderInfoLog(shader, out string log);
+                if (log.Length != 0)
                 {
                     throw new Exception("Error compiling shader.");
                 }

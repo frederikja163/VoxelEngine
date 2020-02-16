@@ -5,12 +5,19 @@ namespace VoxelEngine.Platforms.Glfw
 {
     public class GlfwWindow : IWindow
     {
-        private readonly unsafe OpenToolkit.GraphicsLibraryFramework.Window* _windowHandle;
+        private static int _windowCount = 0;
+        private readonly unsafe Window* _windowHandle;
         
         public unsafe GlfwWindow()
         {
+            if (_windowCount++ == 0)
+            {
+                GLFW.Init();
+            }
             _windowHandle = GLFW.CreateWindow(1028, 720, "voxel engine", null, null);
             GLFW.SwapInterval(1);
+            
+            Input = new GlfwInput(_windowHandle);
         }
 
         public unsafe bool IsRunning
@@ -18,6 +25,8 @@ namespace VoxelEngine.Platforms.Glfw
             get => !GLFW.WindowShouldClose(_windowHandle);
             set => GLFW.SetWindowShouldClose(_windowHandle, !value);
         }
+
+        public IInput Input { get; }
 
         public unsafe void MakeCurrent()
         {
@@ -34,15 +43,23 @@ namespace VoxelEngine.Platforms.Glfw
             GLFW.DestroyWindow(_windowHandle);
         }
 
-        public void Dispose()
+        public unsafe void Dispose()
         {
-            ReleaseUnmanagedResources();
-            GC.SuppressFinalize(this);
+            GLFW.DestroyWindow(_windowHandle);
+            if (_windowCount-- == 1)
+            {
+                GLFW.Terminate();
+            }
         }
 
         ~GlfwWindow()
         {
             ReleaseUnmanagedResources();
+        }
+        
+        public IntPtr GetProcAddress(string procName)
+        {
+            return GLFW.GetProcAddress(procName);
         }
     }
 }

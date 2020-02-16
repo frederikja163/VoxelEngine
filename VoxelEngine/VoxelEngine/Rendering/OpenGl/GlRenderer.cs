@@ -12,7 +12,7 @@ namespace VoxelEngine.Rendering.OpenGl
             
         }
 
-        public void LoadBindings(IPlatform context)
+        public void LoadBindings(IBindingsContext context)
         {
             GL.LoadBindings(context);
         }

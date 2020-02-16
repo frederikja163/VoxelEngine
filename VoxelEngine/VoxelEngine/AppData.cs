@@ -7,14 +7,11 @@ namespace VoxelEngine
     {
         public IWindow Window { get; }
         
-        public IInput Input { get; }
-        
         public IRenderer Renderer { get; }
 
-        public AppData(IWindow window, IInput input, IRenderer renderer)
+        public AppData(IWindow window, IRenderer renderer)
         {
             Window = window;
-            Input = input;
             Renderer = renderer;
         }
     }

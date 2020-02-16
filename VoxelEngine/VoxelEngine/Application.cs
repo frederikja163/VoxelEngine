@@ -1,25 +1,33 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Threading;
 using VoxelEngine.Layers;
 using VoxelEngine.Platforms;
 using VoxelEngine.Rendering;
 
+/*
+ * TODO-list:
+ * Camera
+ * Input API
+ * Chunks
+ * Chunk batching
+ * Multiple chunks
+ * Render distance
+ * Multiplayer
+ */
+
+
 namespace VoxelEngine
 {
     public class Application : IDisposable
     {
-        private readonly IPlatform _platform;
         private readonly AppData _appData;
         private readonly LayerManager _layers;
         
         public Application()
         {
-            _platform = Platform.CreatePlatform(PlatformApi.GlfwDesktop);
-            _platform.Initialize();
-            
-            _appData = new AppData(_platform.CreateWindow(),
-                _platform.CreateInput(),
+            _appData = new AppData(Platform.CreateWindow(PlatformApi.GlfwDesktop),
                 Renderer.CreateRenderer(RenderingApi.OpenGl));
             
             _layers = new LayerManager(_appData);
@@ -45,11 +53,11 @@ namespace VoxelEngine
         private void RunDraw()
         {
             _appData.Window.MakeCurrent();
-            _appData.Renderer.LoadBindings(_platform);
+            _appData.Renderer.LoadBindings(_appData.Window);
             _appData.Renderer.ClearColor = Color.Aqua;
             
             _layers.RenderThreadInitialize();
-            
+
             while (_appData.Window.IsRunning)
             {
                 _appData.Renderer.Clear();
@@ -64,7 +72,7 @@ namespace VoxelEngine
         {
             while (_appData.Window.IsRunning)
             {
-                _appData.Input.Update();
+                _appData.Window.Input.Update();
             }
         }
 
@@ -72,7 +80,6 @@ namespace VoxelEngine
         {
             _layers.Dispose();
             _appData.Window.Dispose();
-            _platform.Dispose();
         }
     }
 }
