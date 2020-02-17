@@ -150,7 +150,7 @@ namespace VoxelEngine.Rendering.OpenGl
                 throw new ArgumentException($"{name} is not a valid uniform name on the shader.");
             }
             Bind();
-            GL.UniformMatrix4(loc, 4 * 4, false, ref value.M11);
+            GL.UniformMatrix4(loc, 1, false, ref value.M11);
         }
     }
 }

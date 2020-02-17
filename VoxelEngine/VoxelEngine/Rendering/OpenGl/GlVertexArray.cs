@@ -37,7 +37,7 @@ namespace VoxelEngine.Rendering.OpenGl
             {
                 int location = layout.Shader.GetAttributeLocation(layout[i].AttributeName);
                 GL.EnableVertexAttribArray(location);
-                GL.VertexAttribPointer(location, layout[i].Count, GetAttribType(layout[i].Type), true, stride, offset);
+                GL.VertexAttribPointer(location, layout[i].Count, GetAttribType(layout[i].Type), false, stride, offset);
                 offset += Layout.GetSizeOf(layout[i].Type) * layout[i].Count;
             }
         }

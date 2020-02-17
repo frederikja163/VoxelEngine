@@ -1,12 +1,23 @@
 ﻿using System;
+using System.Numerics;
 using OpenToolkit.GraphicsLibraryFramework;
+using VoxelEngine.Platforms;
 
 namespace VoxelEngine.Platforms.Glfw
 {
     public class GlfwInput : BaseInput
     {
+        private unsafe Window* _window;
+        private Vector2 _mousePos;
+        private bool _isCenterMode;
+        
         public unsafe GlfwInput(Window* window)
         {
+            _window = window;
+            
+            GLFW.GetCursorPos(_window, out double x, out double y);
+            _mousePos = new Vector2((float)x, (float)y);
+            
             GLFW.SetKeyCallback(window, (window1, key, code, action, mods) =>
             {
                 Key? k = GlfwKeyToKey(key);
@@ -23,12 +34,45 @@ namespace VoxelEngine.Platforms.Glfw
                     }
                 }
             });
+            GLFW.SetCursorPosCallback(window, (window1, x, y) =>
+            {
+                Vector2 newMouse = new Vector2((float) x, (float) y);
+                MouseMoved?.Invoke(_mousePos - newMouse);
+            });
         }
         
         public override void Update()
         {
             base.Update();
             GLFW.PollEvents();
+        }
+
+        public override Action<Vector2> MouseMoved { get; }
+        
+        public override unsafe Vector2 MousePosition
+        {
+            get => _mousePos;
+            set
+            {
+                GLFW.SetCursorPos(_window, value.X, value.Y);
+            }
+        }
+
+        public override unsafe bool IsCenterMode
+        {
+            get => _isCenterMode;
+            set
+            {
+                _isCenterMode = value;
+                if (value)
+                {
+                    GLFW.SetInputMode(_window, CursorStateAttribute.Cursor, CursorModeValue.CursorDisabled);
+                }
+                else
+                {
+                    GLFW.SetInputMode(_window, CursorStateAttribute.Cursor, CursorModeValue.CursorNormal);
+                }
+            }
         }
 
         private KeyState GlfwKeystateToKeystate(InputAction state)
@@ -52,59 +96,59 @@ namespace VoxelEngine.Platforms.Glfw
 
             return key switch
             {
-                OpenToolkit.GraphicsLibraryFramework.Keys.D0 => Key.Num0,
-                OpenToolkit.GraphicsLibraryFramework.Keys.D1 => Key.Num1,
-                OpenToolkit.GraphicsLibraryFramework.Keys.D2 => Key.Num2,
-                OpenToolkit.GraphicsLibraryFramework.Keys.D3 => Key.Num3,
-                OpenToolkit.GraphicsLibraryFramework.Keys.D4 => Key.Num4,
-                OpenToolkit.GraphicsLibraryFramework.Keys.D5 => Key.Num5,
-                OpenToolkit.GraphicsLibraryFramework.Keys.D6 => Key.Num6,
-                OpenToolkit.GraphicsLibraryFramework.Keys.D7 => Key.Num7,
-                OpenToolkit.GraphicsLibraryFramework.Keys.D8 => Key.Num8,
-                OpenToolkit.GraphicsLibraryFramework.Keys.D9 => Key.Num9,
-                OpenToolkit.GraphicsLibraryFramework.Keys.A => Key.A,
-                OpenToolkit.GraphicsLibraryFramework.Keys.B => Key.B,
-                OpenToolkit.GraphicsLibraryFramework.Keys.C => Key.C,
-                OpenToolkit.GraphicsLibraryFramework.Keys.D => Key.D,
-                OpenToolkit.GraphicsLibraryFramework.Keys.E => Key.E,
-                OpenToolkit.GraphicsLibraryFramework.Keys.F => Key.F,
-                OpenToolkit.GraphicsLibraryFramework.Keys.G => Key.G,
-                OpenToolkit.GraphicsLibraryFramework.Keys.H => Key.H,
-                OpenToolkit.GraphicsLibraryFramework.Keys.I => Key.I,
-                OpenToolkit.GraphicsLibraryFramework.Keys.J => Key.J,
-                OpenToolkit.GraphicsLibraryFramework.Keys.K => Key.K,
-                OpenToolkit.GraphicsLibraryFramework.Keys.L => Key.L,
-                OpenToolkit.GraphicsLibraryFramework.Keys.M => Key.M,
-                OpenToolkit.GraphicsLibraryFramework.Keys.N => Key.N,
-                OpenToolkit.GraphicsLibraryFramework.Keys.O => Key.O,
-                OpenToolkit.GraphicsLibraryFramework.Keys.P => Key.P,
-                OpenToolkit.GraphicsLibraryFramework.Keys.Q => Key.Q,
-                OpenToolkit.GraphicsLibraryFramework.Keys.R => Key.R,
-                OpenToolkit.GraphicsLibraryFramework.Keys.S => Key.S,
-                OpenToolkit.GraphicsLibraryFramework.Keys.T => Key.T,
-                OpenToolkit.GraphicsLibraryFramework.Keys.U => Key.U,
-                OpenToolkit.GraphicsLibraryFramework.Keys.V => Key.V,
-                OpenToolkit.GraphicsLibraryFramework.Keys.W => Key.W,
-                OpenToolkit.GraphicsLibraryFramework.Keys.X => Key.X,
-                OpenToolkit.GraphicsLibraryFramework.Keys.Y => Key.Y,
-                OpenToolkit.GraphicsLibraryFramework.Keys.Z => Key.Z,
-                OpenToolkit.GraphicsLibraryFramework.Keys.Escape => Key.Escape,
-                OpenToolkit.GraphicsLibraryFramework.Keys.KeyPad0 => Key.Num0,
-                OpenToolkit.GraphicsLibraryFramework.Keys.KeyPad1 => Key.Num1,
-                OpenToolkit.GraphicsLibraryFramework.Keys.KeyPad2 => Key.Num2,
-                OpenToolkit.GraphicsLibraryFramework.Keys.KeyPad3 => Key.Num3,
-                OpenToolkit.GraphicsLibraryFramework.Keys.KeyPad4 => Key.Num4,
-                OpenToolkit.GraphicsLibraryFramework.Keys.KeyPad5 => Key.Num5,
-                OpenToolkit.GraphicsLibraryFramework.Keys.KeyPad6 => Key.Num6,
-                OpenToolkit.GraphicsLibraryFramework.Keys.KeyPad7 => Key.Num7,
-                OpenToolkit.GraphicsLibraryFramework.Keys.KeyPad8 => Key.Num8,
-                OpenToolkit.GraphicsLibraryFramework.Keys.KeyPad9 => Key.Num9,
-                OpenToolkit.GraphicsLibraryFramework.Keys.LeftShift => Key.Shift,
-                OpenToolkit.GraphicsLibraryFramework.Keys.LeftControl => Key.Control,
-                OpenToolkit.GraphicsLibraryFramework.Keys.LeftAlt => Key.Alt,
-                OpenToolkit.GraphicsLibraryFramework.Keys.RightShift => Key.Shift,
-                OpenToolkit.GraphicsLibraryFramework.Keys.RightControl => Key.Control,
-                OpenToolkit.GraphicsLibraryFramework.Keys.RightAlt => Key.Alt,
+                Keys.D0 => Key.Num0,
+                Keys.D1 => Key.Num1,
+                Keys.D2 => Key.Num2,
+                Keys.D3 => Key.Num3,
+                Keys.D4 => Key.Num4,
+                Keys.D5 => Key.Num5,
+                Keys.D6 => Key.Num6,
+                Keys.D7 => Key.Num7,
+                Keys.D8 => Key.Num8,
+                Keys.D9 => Key.Num9,
+                Keys.A => Key.A,
+                Keys.B => Key.B,
+                Keys.C => Key.C,
+                Keys.D => Key.D,
+                Keys.E => Key.E,
+                Keys.F => Key.F,
+                Keys.G => Key.G,
+                Keys.H => Key.H,
+                Keys.I => Key.I,
+                Keys.J => Key.J,
+                Keys.K => Key.K,
+                Keys.L => Key.L,
+                Keys.M => Key.M,
+                Keys.N => Key.N,
+                Keys.O => Key.O,
+                Keys.P => Key.P,
+                Keys.Q => Key.Q,
+                Keys.R => Key.R,
+                Keys.S => Key.S,
+                Keys.T => Key.T,
+                Keys.U => Key.U,
+                Keys.V => Key.V,
+                Keys.W => Key.W,
+                Keys.X => Key.X,
+                Keys.Y => Key.Y,
+                Keys.Z => Key.Z,
+                Keys.Escape => Key.Escape,
+                Keys.KeyPad0 => Key.Num0,
+                Keys.KeyPad1 => Key.Num1,
+                Keys.KeyPad2 => Key.Num2,
+                Keys.KeyPad3 => Key.Num3,
+                Keys.KeyPad4 => Key.Num4,
+                Keys.KeyPad5 => Key.Num5,
+                Keys.KeyPad6 => Key.Num6,
+                Keys.KeyPad7 => Key.Num7,
+                Keys.KeyPad8 => Key.Num8,
+                Keys.KeyPad9 => Key.Num9,
+                Keys.LeftShift => Key.Shift,
+                Keys.LeftControl => Key.Control,
+                Keys.LeftAlt => Key.Alt,
+                Keys.RightShift => Key.Shift,
+                Keys.RightControl => Key.Control,
+                Keys.RightAlt => Key.Alt,
                 _ => InvalidKey()
             };
         }

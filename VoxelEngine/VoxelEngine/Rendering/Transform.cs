@@ -1,14 +1,14 @@
 ﻿using System.Numerics;
 
-namespace VoxelEngine
+namespace VoxelEngine.Rendering
 {
     public class Transform
     {
         public Vector3 Position { get; set; }
         
         public Quaternion Rotation { get; set; }
-        
-        public float Scale { get; set; }
+
+        public float Scale { get; set; } = 1;
 
         public Matrix4x4 CreateMatrix()
         {

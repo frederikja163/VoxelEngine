@@ -1,6 +1,6 @@
 ﻿using System.Numerics;
 
-namespace VoxelEngine
+namespace VoxelEngine.Rendering
 {
     public class Camera : Transform
     {
@@ -13,10 +13,10 @@ namespace VoxelEngine
             return cam;
         }
         
-        public static Camera CreatePerspective(float width, float height)
+        public static Camera CreatePerspective(float fov, float aspect)
         {
             Camera cam = new Camera();
-            cam.Projection = Matrix4x4.CreatePerspective(width, height, 0.001f, 1000f);
+            cam.Projection = Matrix4x4.CreatePerspectiveFieldOfView(fov, aspect, 0.001f, 1000f);
             return cam;
         }
     }

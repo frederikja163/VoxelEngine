@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Numerics;
 
 namespace VoxelEngine.Platforms
 {
@@ -12,12 +14,14 @@ namespace VoxelEngine.Platforms
         {
             _keys[key] = KeyState.Pressed;
             _keysToUpdate.Add(key);
+            KeyPressed?.Invoke(key);
         }
 
         protected void OnKeyReleased(Key key)
         {
             _keys[key] = KeyState.Released;
             _keysToUpdate.Add(key);
+            KeyReleased?.Invoke(key);
         }
 
         public virtual void Update()
@@ -36,6 +40,11 @@ namespace VoxelEngine.Platforms
             _keysToUpdate.Clear();
         }
 
+        public Action<Key> KeyPressed { get; }
+        
+        public Action<Key> KeyReleased { get; }
+        public abstract Action<Vector2> MouseMoved { get; }
+
         public KeyState this[Key key]
         {
             get
@@ -46,11 +55,16 @@ namespace VoxelEngine.Platforms
                 }
                 catch
                 {
+                    _keys[key] = KeyState.Up;
                     return KeyState.Up;
                 }
             }
         }
 
         public KeyState this[MouseButton button] => throw new System.NotImplementedException();
+        
+        public abstract Vector2 MousePosition { get; set; }
+        
+        public abstract bool IsCenterMode { get; set; }
     }
 }

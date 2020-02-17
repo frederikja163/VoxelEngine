@@ -33,6 +33,8 @@ namespace VoxelEngine.Layers
         private IVertexBuffer<Vertex> _vbo;
         private IIndexBuffer<uint> _ebo;
         private IVertexArray<Vertex, uint> _vao;
+        private Camera _camera;
+        private Transform _transform = new Transform();
 
         private static readonly uint[] Indices = new uint[]
         {
@@ -52,6 +54,32 @@ namespace VoxelEngine.Layers
         {
             _input = appData.Window.Input;
             _renderer = appData.Renderer;
+            _camera = Camera.CreatePerspective(1, 1028/720f);
+            _camera.Position = -Vector3.UnitZ;
+            _transform.Position = Vector3.UnitX * 0.5f;
+        }
+
+        public void UpdateThreadTick()
+        {
+            Vector3 dir = Vector3.Zero;
+            if (_input[Key.W] == KeyState.Down)
+            {
+                dir += Vector3.UnitZ;
+            }
+            if (_input[Key.S] == KeyState.Down)
+            {
+                dir -= Vector3.UnitZ;
+            }
+            if (_input[Key.A] == KeyState.Down)
+            {
+                dir += Vector3.UnitX;
+            }
+            if (_input[Key.D] == KeyState.Down)
+            {
+                dir -= Vector3.UnitX;
+            }
+
+            _camera.Position += dir / 1000000f;
         }
 
         public void RenderThreadInitialize()
@@ -60,14 +88,16 @@ namespace VoxelEngine.Layers
             Layout layout = Layout.GenerateFrom<Vertex>(_shader);
 
             _vbo = _renderer.CreateVertexBuffer(Vert);
-            _ebo = _renderer.CreateIndexBuffer(Indices);
+            _ebo = _renderer.CreateIndexBuffer(Indices); 
             _vao = _renderer.CreateVertexArray(_vbo, _ebo, layout);
-
         }
 
         public void RenderThreadTick()
         {
             _shader.Bind();
+            _shader.SetUniform("uModel", _transform.CreateMatrix());
+            _shader.SetUniform("uView", _camera.CreateMatrix());
+            _shader.SetUniform("uProjection", _camera.Projection);
             GL.DrawElements(PrimitiveType.Triangles, 6, DrawElementsType.UnsignedInt, 0);
         }
 

@@ -55,7 +55,7 @@ namespace VoxelEngine.Rendering
                     {
                         items.Add(new LayoutItem(fields[i].Name, LayoutType.Float, count * 3));
                     }
-                    else if (fields[i].FieldType == typeof(Vector4) || fields[i].FieldType == typeof(Color4))
+                    else if (fields[i].FieldType == typeof(Vector4))
                     {
                         items.Add(new LayoutItem(fields[i].Name, LayoutType.Float, count * 4));
                     }

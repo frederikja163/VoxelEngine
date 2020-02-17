@@ -15,6 +15,7 @@ namespace VoxelEngine.Rendering.OpenGl
         public void LoadBindings(IBindingsContext context)
         {
             GL.LoadBindings(context);
+            GL.Enable(EnableCap.DepthTest);
         }
 
         private Color _clearColor;
@@ -31,7 +32,7 @@ namespace VoxelEngine.Rendering.OpenGl
         
         public void Clear()
         {
-            GL.Clear(ClearBufferMask.ColorBufferBit);
+            GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
         }
 
         public IVertexBuffer<TType> CreateVertexBuffer<TType>(TType[] data)
