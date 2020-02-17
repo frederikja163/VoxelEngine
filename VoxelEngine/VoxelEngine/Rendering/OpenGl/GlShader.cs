@@ -24,7 +24,6 @@ namespace VoxelEngine.Rendering.OpenGl
                 }
                 return shader;
             }
-            
             _handle = GL.CreateProgram();
 
             int vert = CreateShader(vertexPath, ShaderType.VertexShader);

@@ -7,11 +7,11 @@ namespace VoxelEngine.Platforms
     {
         public void Update();
 
-        public Action<Key> KeyPressed { get; }
+        public Action<Key> KeyPressed { get; set; }
         
-        public Action<Key> KeyReleased { get; }
+        public Action<Key> KeyReleased { get; set; }
         
-        public Action<Vector2> MouseMoved { get; }
+        public Action<Vector2> MouseMoved { get; set; }
         
         public KeyState this[Key key] { get; }
         

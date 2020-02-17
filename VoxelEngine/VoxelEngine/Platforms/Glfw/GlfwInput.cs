@@ -38,6 +38,7 @@ namespace VoxelEngine.Platforms.Glfw
             {
                 Vector2 newMouse = new Vector2((float) x, (float) y);
                 MouseMoved?.Invoke(_mousePos - newMouse);
+                _mousePos = newMouse;
             });
         }
         
@@ -47,7 +48,7 @@ namespace VoxelEngine.Platforms.Glfw
             GLFW.PollEvents();
         }
 
-        public override Action<Vector2> MouseMoved { get; }
+        public override Action<Vector2> MouseMoved { get; set; }
         
         public override unsafe Vector2 MousePosition
         {

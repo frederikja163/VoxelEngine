@@ -10,9 +10,8 @@ out vec4 fColor;
 
 void main()
 {
-    //gl_Position = uProjection * uView * uModel * vec4(vPos, 1);
+    //gl_Position = uModel * uView * uProjection * vec4(vPos, 1);
     gl_Position = uProjection * uView * uModel * vec4(vPos, 1);
-    //gl_Position = uView * uModel * vec4(vPos, 1);
     //gl_Position = vec4(vPos, 1) * uModel * uView * uProjection;
     fColor = (vec4(vPos, 1) + vColor) / 2.0f;
 }

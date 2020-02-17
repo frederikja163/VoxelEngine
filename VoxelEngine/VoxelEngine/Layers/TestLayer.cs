@@ -53,10 +53,23 @@ namespace VoxelEngine.Layers
         public void AddedToManager(AppData appData)
         {
             _input = appData.Window.Input;
+            _input.KeyPressed += (key) =>
+            {
+                if (key == Key.Escape)
+                {
+                    appData.Window.IsRunning = false;
+                }
+            };
+            _input.MouseMoved += mouseDelta =>
+            {
+                _camera.Rotation *= Quaternion.CreateFromYawPitchRoll(mouseDelta.X / 1000, mouseDelta.Y / 1000, 0);
+            };
+            _input.IsCenterMode = true;
             _renderer = appData.Renderer;
             _camera = Camera.CreatePerspective(1, 1028/720f);
             _camera.Position = -Vector3.UnitZ;
             _transform.Position = Vector3.UnitX * 0.5f;
+            _transform.Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitY, 1);
         }
 
         public void UpdateThreadTick()
@@ -64,19 +77,19 @@ namespace VoxelEngine.Layers
             Vector3 dir = Vector3.Zero;
             if (_input[Key.W] == KeyState.Down)
             {
-                dir += Vector3.UnitZ;
+                dir += _camera.Front;
             }
             if (_input[Key.S] == KeyState.Down)
             {
-                dir -= Vector3.UnitZ;
+                dir -= _camera.Front;
             }
             if (_input[Key.A] == KeyState.Down)
             {
-                dir += Vector3.UnitX;
+                dir += _camera.Right;
             }
             if (_input[Key.D] == KeyState.Down)
             {
-                dir -= Vector3.UnitX;
+                dir -= _camera.Right;
             }
 
             _camera.Position += dir / 1000000f;

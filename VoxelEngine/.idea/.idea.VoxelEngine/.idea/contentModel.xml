@@ -13,6 +13,9 @@
           <e p="vertex.glsl" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Extensions" t="Include">
+          <e p="MathExtensions.cs" t="Include" />
+        </e>
         <e p="Layers" t="Include">
           <e p="ILayer.cs" t="Include" />
           <e p="LayerManager.cs" t="Include" />

@@ -40,10 +40,10 @@ namespace VoxelEngine.Platforms
             _keysToUpdate.Clear();
         }
 
-        public Action<Key> KeyPressed { get; }
+        public Action<Key> KeyPressed { get; set; }
         
-        public Action<Key> KeyReleased { get; }
-        public abstract Action<Vector2> MouseMoved { get; }
+        public Action<Key> KeyReleased { get; set; }
+        public abstract Action<Vector2> MouseMoved { get; set; }
 
         public KeyState this[Key key]
         {
