@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\fjapl\\Documents\\projects\\VoxelEngine\\VoxelEngine\\VoxelEngine\\VoxelEngine.csproj",
+    "projectUniqueName": "C:\\Users\\fjapl\\Documents\\VoxelEngine\\VoxelEngine\\VoxelEngine\\VoxelEngine.csproj",
     "projectName": "VoxelEngine",
-    "projectPath": "C:\\Users\\fjapl\\Documents\\projects\\VoxelEngine\\VoxelEngine\\VoxelEngine\\VoxelEngine.csproj",
-    "outputPath": "C:\\Users\\fjapl\\Documents\\projects\\VoxelEngine\\VoxelEngine\\VoxelEngine\\obj\\",
+    "projectPath": "C:\\Users\\fjapl\\Documents\\VoxelEngine\\VoxelEngine\\VoxelEngine\\VoxelEngine.csproj",
+    "outputPath": "C:\\Users\\fjapl\\Documents\\VoxelEngine\\VoxelEngine\\VoxelEngine\\obj\\",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "netcoreapp3.1"
@@ -40,7 +40,7 @@
           "privateAssets": "all"
         }
       },
-      "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+      "runtimeIdentifierGraphPath": "C:\\Users\\fjapl\\.dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
     }
   }
 }
