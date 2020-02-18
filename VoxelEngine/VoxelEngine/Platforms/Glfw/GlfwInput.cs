@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Numerics;
 using OpenToolkit.GraphicsLibraryFramework;
-using VoxelEngine.Platforms;
+using OpenToolkit.Mathematics;
 
 namespace VoxelEngine.Platforms.Glfw
 {

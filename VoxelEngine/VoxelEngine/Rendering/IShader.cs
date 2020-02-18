@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Drawing;
-using System.Numerics;
+using OpenToolkit.Mathematics;
 
 namespace VoxelEngine.Rendering
 {
@@ -18,6 +18,6 @@ namespace VoxelEngine.Rendering
         public void SetUniform(string name, Vector2 value);
         public void SetUniform(string name, Vector3 value);
         public void SetUniform(string name, Vector4 value);
-        public void SetUniform(string name, Matrix4x4 value);
+        public void SetUniform(string name, Matrix4 value);
     }
 }

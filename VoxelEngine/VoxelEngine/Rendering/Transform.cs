@@ -1,5 +1,5 @@
-﻿using System.Numerics;
-using VoxelEngine.Extensions;
+﻿using OpenToolkit.Mathematics;
+using VoxelEngine;
 
 namespace VoxelEngine.Rendering
 {
@@ -11,18 +11,18 @@ namespace VoxelEngine.Rendering
 
         public float Scale { get; set; } = 1;
 
-        public Vector3 Right =>  Rotation.Multiply(Vector3.UnitX);
+        public Vector3 Right =>  Rotation * Vector3.UnitX;
         
-        public Vector3 Front =>  Rotation.Multiply(Vector3.UnitZ);
+        public Vector3 Front =>  Rotation * Vector3.UnitZ;
         
-        public Vector3 Up =>  Rotation.Multiply(Vector3.UnitY);
+        public Vector3 Up =>  Rotation * Vector3.UnitY;
 
-        public Matrix4x4 CreateMatrix()
+        public Matrix4 CreateMatrix()
         {
-            return Matrix4x4.Identity *
-                   Matrix4x4.CreateFromQuaternion(Rotation) *
-                   Matrix4x4.CreateScale(Scale) *
-                   Matrix4x4.CreateTranslation(Position);
+            return Matrix4.Identity *
+                   Matrix4.CreateFromQuaternion(Rotation) *
+                   Matrix4.CreateScale(Scale) *
+                   Matrix4.CreateTranslation(Position);
         }
     }
 }

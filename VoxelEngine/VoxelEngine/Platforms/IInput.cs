@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Numerics;
+using OpenToolkit.Mathematics;
 
 namespace VoxelEngine.Platforms
 {
@@ -11,7 +11,7 @@ namespace VoxelEngine.Platforms
         
         public Action<Key> KeyReleased { get; set; }
         
-        public Action<Vector2> MouseMoved { get; set; }
+        public Action<OpenToolkit.Mathematics.Vector2> MouseMoved { get; set; }
         
         public KeyState this[Key key] { get; }
         

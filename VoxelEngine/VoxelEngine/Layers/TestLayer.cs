@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Drawing;
-using System.Numerics;
+using OpenToolkit.Mathematics;
 using OpenToolkit.Graphics.OpenGL4;
 using VoxelEngine.Platforms;
 using VoxelEngine.Rendering;
@@ -33,7 +33,7 @@ namespace VoxelEngine.Layers
         private IVertexBuffer<Vertex> _vbo;
         private IIndexBuffer<uint> _ebo;
         private IVertexArray<Vertex, uint> _vao;
-        private Camera _camera;
+        private Camera2 _camera;
         private Transform _transform = new Transform();
 
         private static readonly uint[] Indices = new uint[]
@@ -62,14 +62,14 @@ namespace VoxelEngine.Layers
             };
             _input.MouseMoved += mouseDelta =>
             {
-                _camera.Rotation *= Quaternion.CreateFromYawPitchRoll(mouseDelta.X / 1000, mouseDelta.Y / 1000, 0);
+                _camera.Pitch += mouseDelta.Y / 100;
+                _camera.Yaw -= mouseDelta.X / 100;
             };
             _input.IsCenterMode = true;
             _renderer = appData.Renderer;
-            _camera = Camera.CreatePerspective(1, 1028/720f);
-            _camera.Position = -Vector3.UnitZ;
+            _camera = new Camera2(Vector3.One, 1028 / 720f);
             _transform.Position = Vector3.UnitX * 0.5f;
-            _transform.Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitY, 1);
+            _transform.Rotation = Quaternion.FromAxisAngle(Vector3.UnitY, 1);
         }
 
         public void UpdateThreadTick()
@@ -85,11 +85,11 @@ namespace VoxelEngine.Layers
             }
             if (_input[Key.A] == KeyState.Down)
             {
-                dir += _camera.Right;
+                dir -= _camera.Right;
             }
             if (_input[Key.D] == KeyState.Down)
             {
-                dir -= _camera.Right;
+                dir += _camera.Right;
             }
 
             _camera.Position += dir / 1000000f;
@@ -109,8 +109,10 @@ namespace VoxelEngine.Layers
         {
             _shader.Bind();
             _shader.SetUniform("uModel", _transform.CreateMatrix());
-            _shader.SetUniform("uView", _camera.CreateMatrix());
-            _shader.SetUniform("uProjection", _camera.Projection);
+            _shader.SetUniform("uView", _camera.GetViewMatrix());
+            _shader.SetUniform("uProjection", _camera.GetProjectionMatrix());
+            GL.DrawElements(PrimitiveType.Triangles, 6, DrawElementsType.UnsignedInt, 0);
+            _shader.SetUniform("uModel", Matrix4.Identity);
             GL.DrawElements(PrimitiveType.Triangles, 6, DrawElementsType.UnsignedInt, 0);
         }
 

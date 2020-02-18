@@ -2,19 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1341ea1-d939-46e8-a7ff-ac7e9b54cad0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/VoxelEngine/Extensions/MathExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Deps/OpenToolkit.Core.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Deps/OpenToolkit.Graphics.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Deps/OpenToolkit.GraphicsLibraryFramework.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Deps/OpenToolkit.Mathematics.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/Camera2.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VoxelEngine/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VoxelEngine/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VoxelEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VoxelEngine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/Assets/vertex.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Assets/vertex.glsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Extensions/MathExtensions.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/Layers/TestLayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Layers/TestLayer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/Platforms/BaseInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Platforms/BaseInput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwInput.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/Platforms/IInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Platforms/IInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/Camera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/Camera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/IShader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/IShader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/Layout.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/Layout.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlShader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlShader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/Transform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/Transform.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/VoxelEngine.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/VoxelEngine.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/bin/Debug/netcoreapp3.1/VoxelEngine.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/bin/Debug/netcoreapp3.1/VoxelEngine.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/bin/Debug/netcoreapp3.1/VoxelEngine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/bin/Debug/netcoreapp3.1/VoxelEngine.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/bin/Debug/netcoreapp3.1/VoxelEngine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/bin/Debug/netcoreapp3.1/VoxelEngine.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.pdb" afterDir="false" />
     </list>
@@ -41,56 +51,46 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Layers/TestLayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/Key.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Application.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/VoxelEngine/Assets/fragment.glsl" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/VoxelEngine/Assets/vertex.glsl" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BBB3B884-123D-47EA-9CD1-5BED540D02AE/1E0/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlShader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/IShader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/Camera.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BBB3B884-123D-47EA-9CD1-5BED540D02AE/14E/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BBB3B884-123D-47EA-9CD1-5BED540D02AE/13A/Thread.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/IVertexBuffer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlVertexBuffer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/Transform.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/IIndexBuffer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BBB3B884-123D-47EA-9CD1-5BED540D02AE/8C/Int32.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlIndexBuffer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/LayoutType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlRenderer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/LayoutItem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6D02E760-C9FE-42E8-B445-2A38CF45B374/7/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/Renderer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/RenderingApi.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/KeyState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/IRenderer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlVertexArray.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/Layout.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/IVertexArray.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/PlatformApi.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/Platform.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/IInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/IWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Extensions/MathExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/AppData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/BaseInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/MouseButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9E840810-1A96-423E-912D-7D0EB8E144B8/22/d366b3a1/Keys.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/85F16981-A516-4FB6-8FFE-4CE7E9C1A167/B/Color.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/VoxelEngine/Layers/LayerManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BBB3B884-123D-47EA-9CD1-5BED540D02AE/3DC/List.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Layers/TestLayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/VoxelEngine/Layers/ILayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/IInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/PlatformApi.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/KeyState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/IWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/Platform.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/MouseButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/BaseInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/Key.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/IVertexArray.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/Renderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/Camera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/Layout.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/Transform.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/IRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Application.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/LayoutItem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/LayoutType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/AppData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/RenderingApi.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/IShader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/IIndexBuffer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/IVertexBuffer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlIndexBuffer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlVertexArray.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlVertexBuffer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/Camera2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlShader.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/VoxelEngine/Renderer.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/GlfwInput.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/GlfwWindow.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/GlRenderer.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Platforms/Platforms.cs" />
@@ -112,7 +112,6 @@
         <option value="$PROJECT_DIR$/VoxelEngine/Rendering/LayoutType.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Layers/ILayer.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Layers/LayerManager.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/IShader.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Rendering/LayoutItem.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Assets/fragment.glsl" />
         <option value="$PROJECT_DIR$/VoxelEngine/Transform.cs" />
@@ -127,19 +126,22 @@
         <option value="$PROJECT_DIR$/VoxelEngine/Platforms/IWindow.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Platforms/Key.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlVertexArray.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/Layout.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlRenderer.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/Camera.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwWindow.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Program.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlShader.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Platforms/IInput.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Platforms/BaseInput.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Assets/vertex.glsl" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwInput.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/VoxelEngine.csproj" />
         <option value="$PROJECT_DIR$/VoxelEngine/Extensions/MathExtensions.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/IShader.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlShader.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/Camera.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/Layout.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Rendering/Transform.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Layers/TestLayer.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwInput.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Platforms/BaseInput.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Platforms/IInput.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/Camera2.cs" />
       </list>
     </option>
   </component>
@@ -218,6 +220,7 @@
       <workItem from="1581923528508" duration="1142000" />
       <workItem from="1581949238710" duration="6079000" />
       <workItem from="1581968257554" duration="2512000" />
+      <workItem from="1582010751346" duration="5075000" />
     </task>
     <servers />
   </component>
@@ -247,104 +250,124 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="406" height="438" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1581734689188" />
-    <state width="1877" height="263" key="GridCell.Tab.0.bottom" timestamp="1581971853478">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="123" key="GridCell.Tab.0.bottom" timestamp="1582019367679">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="123" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582019367679" />
     <state width="1877" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963616" />
     <state width="1877" height="263" key="GridCell.Tab.0.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1581971853478" />
-    <state width="1877" height="263" key="GridCell.Tab.0.center" timestamp="1581971853478">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="123" key="GridCell.Tab.0.center" timestamp="1582019367679">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="123" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1582019367679" />
     <state width="1877" height="263" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963616" />
     <state width="1877" height="263" key="GridCell.Tab.0.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1581971853478" />
-    <state width="1877" height="263" key="GridCell.Tab.0.left" timestamp="1581971853478">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="123" key="GridCell.Tab.0.left" timestamp="1582019367679">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="123" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1582019367679" />
     <state width="1877" height="263" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963616" />
     <state width="1877" height="263" key="GridCell.Tab.0.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1581971853478" />
-    <state width="1877" height="263" key="GridCell.Tab.0.right" timestamp="1581971853478">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="123" key="GridCell.Tab.0.right" timestamp="1582019367679">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="123" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1582019367679" />
     <state width="1877" height="263" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963616" />
     <state width="1877" height="263" key="GridCell.Tab.0.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1581971853478" />
-    <state width="1877" height="263" key="GridCell.Tab.1.bottom" timestamp="1581971853399">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="123" key="GridCell.Tab.1.bottom" timestamp="1582019367480">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="123" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582019367480" />
     <state width="1877" height="263" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
     <state width="1877" height="263" key="GridCell.Tab.1.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1581971853399" />
-    <state width="1877" height="263" key="GridCell.Tab.1.center" timestamp="1581971853399">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="123" key="GridCell.Tab.1.center" timestamp="1582019367480">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="123" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1582019367480" />
     <state width="1877" height="263" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
     <state width="1877" height="263" key="GridCell.Tab.1.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1581971853399" />
-    <state width="1877" height="263" key="GridCell.Tab.1.left" timestamp="1581971853399">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="123" key="GridCell.Tab.1.left" timestamp="1582019367480">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="123" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1582019367480" />
     <state width="1877" height="263" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
     <state width="1877" height="263" key="GridCell.Tab.1.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1581971853399" />
-    <state width="1877" height="263" key="GridCell.Tab.1.right" timestamp="1581971853399">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="123" key="GridCell.Tab.1.right" timestamp="1582019367480">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="123" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1582019367480" />
     <state width="1877" height="263" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
     <state width="1877" height="263" key="GridCell.Tab.1.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1581971853399" />
-    <state width="1877" height="263" key="GridCell.Tab.2.bottom" timestamp="1581971853400">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="123" key="GridCell.Tab.2.bottom" timestamp="1582019367480">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="123" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582019367480" />
     <state width="1877" height="263" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
     <state width="1877" height="263" key="GridCell.Tab.2.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1581971853400" />
-    <state width="1877" height="263" key="GridCell.Tab.2.center" timestamp="1581971853399">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="123" key="GridCell.Tab.2.center" timestamp="1582019367480">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="123" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1582019367480" />
     <state width="1877" height="263" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
     <state width="1877" height="263" key="GridCell.Tab.2.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1581971853399" />
-    <state width="1877" height="263" key="GridCell.Tab.2.left" timestamp="1581971853399">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="123" key="GridCell.Tab.2.left" timestamp="1582019367480">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="123" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1582019367480" />
     <state width="1877" height="263" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
     <state width="1877" height="263" key="GridCell.Tab.2.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1581971853399" />
-    <state width="1877" height="263" key="GridCell.Tab.2.right" timestamp="1581971853400">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="123" key="GridCell.Tab.2.right" timestamp="1582019367480">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="123" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1582019367480" />
     <state width="1877" height="263" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
     <state width="1877" height="263" key="GridCell.Tab.2.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1581971853400" />
-    <state width="1877" height="263" key="GridCell.Tab.3.bottom" timestamp="1581971853400">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="123" key="GridCell.Tab.3.bottom" timestamp="1582019367480">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="123" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582019367480" />
     <state width="1877" height="263" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
     <state width="1877" height="263" key="GridCell.Tab.3.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1581971853400" />
-    <state width="1877" height="263" key="GridCell.Tab.3.center" timestamp="1581971853400">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="123" key="GridCell.Tab.3.center" timestamp="1582019367480">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="123" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1582019367480" />
     <state width="1877" height="263" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
     <state width="1877" height="263" key="GridCell.Tab.3.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1581971853400" />
-    <state width="1877" height="263" key="GridCell.Tab.3.left" timestamp="1581971853400">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="123" key="GridCell.Tab.3.left" timestamp="1582019367480">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="123" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1582019367480" />
     <state width="1877" height="263" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
     <state width="1877" height="263" key="GridCell.Tab.3.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1581971853400" />
-    <state width="1877" height="263" key="GridCell.Tab.3.right" timestamp="1581971853400">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="123" key="GridCell.Tab.3.right" timestamp="1582019367480">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="123" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1582019367480" />
     <state width="1877" height="263" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
     <state width="1877" height="263" key="GridCell.Tab.3.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1581971853400" />
-    <state width="1877" height="263" key="GridCell.Tab.4.bottom" timestamp="1581971853400">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="123" key="GridCell.Tab.4.bottom" timestamp="1582019367481">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="123" key="GridCell.Tab.4.bottom/0.0.1536.824@0.0.1536.824" timestamp="1582019367481" />
     <state width="1877" height="263" key="GridCell.Tab.4.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
     <state width="1877" height="263" key="GridCell.Tab.4.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1581971853400" />
-    <state width="1877" height="263" key="GridCell.Tab.4.center" timestamp="1581971853400">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="123" key="GridCell.Tab.4.center" timestamp="1582019367480">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="123" key="GridCell.Tab.4.center/0.0.1536.824@0.0.1536.824" timestamp="1582019367480" />
     <state width="1877" height="263" key="GridCell.Tab.4.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
     <state width="1877" height="263" key="GridCell.Tab.4.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1581971853400" />
-    <state width="1877" height="263" key="GridCell.Tab.4.left" timestamp="1581971853400">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="123" key="GridCell.Tab.4.left" timestamp="1582019367480">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="123" key="GridCell.Tab.4.left/0.0.1536.824@0.0.1536.824" timestamp="1582019367480" />
     <state width="1877" height="263" key="GridCell.Tab.4.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
     <state width="1877" height="263" key="GridCell.Tab.4.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1581971853400" />
-    <state width="1877" height="263" key="GridCell.Tab.4.right" timestamp="1581971853400">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1493" height="123" key="GridCell.Tab.4.right" timestamp="1582019367480">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="123" key="GridCell.Tab.4.right/0.0.1536.824@0.0.1536.824" timestamp="1582019367480" />
     <state width="1877" height="263" key="GridCell.Tab.4.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
     <state width="1877" height="263" key="GridCell.Tab.4.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1581971853400" />
     <state x="552" y="253" key="Rider.ProjectTemplateDialog.Size" timestamp="1581949909729">

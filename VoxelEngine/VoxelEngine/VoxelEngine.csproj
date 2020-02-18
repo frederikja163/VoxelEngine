@@ -13,16 +13,16 @@
 
     <ItemGroup>
       <Reference Include="OpenToolkit.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null">
-        <HintPath>D:\Projects\OpenTK\opentk\src\OpenToolkit.Graphics\bin\Release\netstandard2.0\OpenToolkit.Core.dll</HintPath>
+        <HintPath>..\Deps\OpenToolkit.Core.dll</HintPath>
       </Reference>
       <Reference Include="OpenToolkit.Graphics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-        <HintPath>D:\Projects\OpenTK\opentk\src\OpenToolkit.Graphics\bin\Release\netstandard2.0\OpenToolkit.Graphics.dll</HintPath>
+        <HintPath>..\Deps\OpenToolkit.Graphics.dll</HintPath>
       </Reference>
       <Reference Include="OpenToolkit.GraphicsLibraryFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null">
-        <HintPath>D:\Projects\OpenTK\opentk\src\Windowing\OpenToolkit.GraphicsLibraryFramework\bin\Release\netcoreapp3.0\OpenToolkit.GraphicsLibraryFramework.dll</HintPath>
+        <HintPath>..\Deps\OpenToolkit.GraphicsLibraryFramework.dll</HintPath>
       </Reference>
       <Reference Include="OpenToolkit.Mathematics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null">
-        <HintPath>D:\Projects\OpenTK\opentk\src\OpenToolkit.Graphics\bin\Release\netstandard2.0\OpenToolkit.Mathematics.dll</HintPath>
+        <HintPath>..\Deps\OpenToolkit.Mathematics.dll</HintPath>
       </Reference>
     </ItemGroup>
 

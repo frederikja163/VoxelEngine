@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
-using System.Numerics;
+using OpenToolkit.Mathematics;
 using OpenToolkit.Graphics.OpenGL4;
 
 namespace VoxelEngine.Rendering.OpenGl
@@ -141,7 +141,7 @@ namespace VoxelEngine.Rendering.OpenGl
             GL.Uniform4(loc, value.X, value.Y, value.Z, value.W);
         }
 
-        public void SetUniform(string name, Matrix4x4 value)
+        public void SetUniform(string name, Matrix4 value)
         {
             int loc = GL.GetUniformLocation(_handle, name);
             if (loc == -1)
@@ -149,7 +149,8 @@ namespace VoxelEngine.Rendering.OpenGl
                 throw new ArgumentException($"{name} is not a valid uniform name on the shader.");
             }
             Bind();
-            GL.UniformMatrix4(loc, 1, false, ref value.M11);
+            Matrix4 v = value;
+            GL.UniformMatrix4(loc, false, ref v);
         }
     }
 }
