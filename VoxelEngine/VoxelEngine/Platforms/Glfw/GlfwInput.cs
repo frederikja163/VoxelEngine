@@ -17,28 +17,31 @@ namespace VoxelEngine.Platforms.Glfw
             GLFW.GetCursorPos(_window, out double x, out double y);
             _mousePos = new Vector2((float)x, (float)y);
             
-            GLFW.SetKeyCallback(window, (window1, key, code, action, mods) =>
+            GLFW.SetKeyCallback(window, KeyEvent);
+            GLFW.SetCursorPosCallback(window, MouseEvent);
+        }
+        
+        private unsafe void KeyEvent(Window* window1, Keys key, int code, InputAction action,KeyModifiers mods)
+        {
+            Key? k = GlfwKeyToKey(key);
+            if (k != null)
             {
-                Key? k = GlfwKeyToKey(key);
-                KeyState state = GlfwKeystateToKeystate(action);
-                if (k != null)
+                if (action == InputAction.Press)
                 {
-                    if (state == KeyState.Pressed)
-                    {
-                        OnKeyPressed(k.Value);
-                    }
-                    else if (state == KeyState.Released)
-                    {
-                        OnKeyReleased(k.Value);
-                    }
+                    OnKeyPressed(k.Value);
                 }
-            });
-            GLFW.SetCursorPosCallback(window, (window1, x, y) =>
-            {
-                Vector2 newMouse = new Vector2((float) x, (float) y);
-                MouseMoved?.Invoke(_mousePos - newMouse);
-                _mousePos = newMouse;
-            });
+                else if (action == InputAction.Release)
+                {
+                    OnKeyReleased(k.Value);
+                }
+            }
+        }
+        
+        private unsafe void MouseEvent(Window* window1, double x, double y)
+        {
+            Vector2 newMouse = new Vector2((float) x, (float) y);
+            MouseMoved?.Invoke(_mousePos - newMouse);
+            _mousePos = newMouse;
         }
         
         public override void Update()
@@ -75,7 +78,7 @@ namespace VoxelEngine.Platforms.Glfw
             }
         }
 
-        private KeyState GlfwKeystateToKeystate(InputAction state)
+        private static KeyState GlfwKeystateToKeystate(InputAction state)
         {
             return state switch
             {
@@ -86,7 +89,7 @@ namespace VoxelEngine.Platforms.Glfw
             };
         }
 
-        private Key? GlfwKeyToKey(Keys key)
+        private static Key? GlfwKeyToKey(Keys key)
         {
             Key? InvalidKey()
             {
@@ -149,6 +152,7 @@ namespace VoxelEngine.Platforms.Glfw
                 Keys.RightShift => Key.Shift,
                 Keys.RightControl => Key.Control,
                 Keys.RightAlt => Key.Alt,
+                Keys.Space => Key.Space,
                 _ => InvalidKey()
             };
         }

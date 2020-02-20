@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fjapl\\Documents\\VoxelEngine\\VoxelEngine\\VoxelEngine\\VoxelEngine.csproj": {}
+    "C:\\Users\\fjapl\\Documents\\projects\\VoxelEngine\\VoxelEngine\\VoxelEngine\\VoxelEngine.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fjapl\\Documents\\VoxelEngine\\VoxelEngine\\VoxelEngine\\VoxelEngine.csproj": {
+    "C:\\Users\\fjapl\\Documents\\projects\\VoxelEngine\\VoxelEngine\\VoxelEngine\\VoxelEngine.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fjapl\\Documents\\VoxelEngine\\VoxelEngine\\VoxelEngine\\VoxelEngine.csproj",
+        "projectUniqueName": "C:\\Users\\fjapl\\Documents\\projects\\VoxelEngine\\VoxelEngine\\VoxelEngine\\VoxelEngine.csproj",
         "projectName": "VoxelEngine",
-        "projectPath": "C:\\Users\\fjapl\\Documents\\VoxelEngine\\VoxelEngine\\VoxelEngine\\VoxelEngine.csproj",
+        "projectPath": "C:\\Users\\fjapl\\Documents\\projects\\VoxelEngine\\VoxelEngine\\VoxelEngine\\VoxelEngine.csproj",
         "packagesPath": "C:\\Users\\fjapl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fjapl\\Documents\\VoxelEngine\\VoxelEngine\\VoxelEngine\\obj\\",
+        "outputPath": "C:\\Users\\fjapl\\Documents\\projects\\VoxelEngine\\VoxelEngine\\VoxelEngine\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\fjapl\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -50,7 +50,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\fjapl\\.dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

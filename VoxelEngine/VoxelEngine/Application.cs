@@ -2,14 +2,13 @@
 using System.Diagnostics;
 using System.Drawing;
 using System.Threading;
+using VoxelEngine.Gameplay;
 using VoxelEngine.Layers;
 using VoxelEngine.Platforms;
 using VoxelEngine.Rendering;
 
 /*
  * TODO-list:
- * Camera
- * Input API
  * Chunks
  * Chunk batching
  * Multiple chunks
@@ -23,19 +22,17 @@ namespace VoxelEngine
     public class Application : IDisposable
     {
         private readonly AppData _appData;
-        private readonly LayerManager _layers;
+        private readonly IState _state;
         
         public Application()
         {
             _appData = new AppData(Platform.CreateWindow(PlatformApi.GlfwDesktop),
                 Renderer.CreateRenderer(RenderingApi.OpenGl));
-            
-            _layers = new LayerManager(_appData);
+            _state = new TestState(_appData);
         }
 
         public void Run()
         {
-            _layers.AddLayer(new TestLayer());
             new Thread(RunDraw).Start();
             new Thread(RunUpdate).Start();
             RunInput();
@@ -43,10 +40,13 @@ namespace VoxelEngine
 
         private void RunUpdate()
         {
-            _layers.UpdateThreadInitialize();
+            _state.UpdateThreadInitialize();
+            Stopwatch watch = Stopwatch.StartNew();
             while (_appData.Window.IsRunning)
             {
-                _layers.UpdateThreadTick();
+                float deltaT = (float)watch.ElapsedTicks / Stopwatch.Frequency;
+                watch.Restart();
+                _state.UpdateThreadTick(deltaT);
             }
         }
 
@@ -56,13 +56,12 @@ namespace VoxelEngine
             _appData.Renderer.LoadBindings(_appData.Window);
             _appData.Renderer.ClearColor = Color.Aqua;
             
-            _layers.RenderThreadInitialize();
-
+            _state.RenderThreadInitialize();
             while (_appData.Window.IsRunning)
             {
                 _appData.Renderer.Clear();
                 
-                _layers.RenderThreadTick();
+                _state.RenderThreadTick();
                 
                 _appData.Window.SwapBuffers();
             }
@@ -78,7 +77,7 @@ namespace VoxelEngine
 
         public void Dispose()
         {
-            _layers.Dispose();
+            _state.Dispose();
             _appData.Window.Dispose();
         }
     }

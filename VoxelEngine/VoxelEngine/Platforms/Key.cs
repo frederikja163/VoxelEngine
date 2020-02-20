@@ -41,6 +41,7 @@
         Shift,
         Control,
         Alt,
-        Escape
+        Escape,
+        Space
     }
 }

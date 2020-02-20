@@ -20,7 +20,7 @@ namespace VoxelEngine.Rendering.OpenGl
                 GL.GetShaderInfoLog(shader, out string log);
                 if (log.Length != 0)
                 {
-                    throw new Exception("Error compiling shader.");
+                    throw new Exception(log);
                 }
                 return shader;
             }

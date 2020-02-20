@@ -2,12 +2,13 @@
 using System.Drawing;
 using OpenToolkit.Mathematics;
 using OpenToolkit.Graphics.OpenGL4;
+using VoxelEngine.Gameplay;
 using VoxelEngine.Platforms;
 using VoxelEngine.Rendering;
 
 namespace VoxelEngine.Layers
 {
-    public class TestLayer : ILayer
+    public class TestState : IState
     {
         private struct Vertex
         {
@@ -33,7 +34,7 @@ namespace VoxelEngine.Layers
         private IVertexBuffer<Vertex> _vbo;
         private IIndexBuffer<uint> _ebo;
         private IVertexArray<Vertex, uint> _vao;
-        private Camera2 _camera;
+        private Camera _camera;
         private Transform _transform = new Transform();
 
         private static readonly uint[] Indices = new uint[]
@@ -50,7 +51,7 @@ namespace VoxelEngine.Layers
             new Vertex(new Vector3(-0.5f, 0.5f, 0), Color.Gray)
         };
 
-        public void AddedToManager(AppData appData)
+        public TestState(AppData appData)
         {
             _input = appData.Window.Input;
             _input.KeyPressed += (key) =>
@@ -67,21 +68,24 @@ namespace VoxelEngine.Layers
             };
             _input.IsCenterMode = true;
             _renderer = appData.Renderer;
-            _camera = new Camera2(Vector3.One, 1028 / 720f);
+            _camera = new Camera(Vector3.One, 1028 / 720f);
             _transform.Position = Vector3.UnitX * 0.5f;
             _transform.Rotation = Quaternion.FromAxisAngle(Vector3.UnitY, 1);
         }
 
-        public void UpdateThreadTick()
+        public void UpdateThreadTick(float deltaT)
         {
             Vector3 dir = Vector3.Zero;
+            Vector3 front = _camera.Front;
+            front.Y = 0;
+            front.Normalize();
             if (_input[Key.W] == KeyState.Down)
             {
-                dir += _camera.Front;
+                dir += front;
             }
             if (_input[Key.S] == KeyState.Down)
             {
-                dir -= _camera.Front;
+                dir -= front;
             }
             if (_input[Key.A] == KeyState.Down)
             {
@@ -91,8 +95,26 @@ namespace VoxelEngine.Layers
             {
                 dir += _camera.Right;
             }
+            if (_input[Key.Space] == KeyState.Down)
+            {
+                dir.Y += 1;
+            }
+            if (_input[Key.Shift] == KeyState.Down)
+            {
+                dir.Y -= 1;
+            }
 
-            _camera.Position += dir / 1000000f;
+            if (_input[Key.Control] == KeyState.Down)
+            {
+                dir *= 2f;
+                _camera.Fov = (float)Math.PI / 2.1f;
+            }
+            else
+            {
+                _camera.Fov = (float) Math.PI / 2f;
+            }
+            
+            _camera.Position += dir * deltaT;
         }
 
         public void RenderThreadInitialize()

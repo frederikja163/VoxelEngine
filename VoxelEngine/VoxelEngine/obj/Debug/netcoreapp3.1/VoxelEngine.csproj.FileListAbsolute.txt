@@ -8,14 +8,6 @@ C:\Users\fjapl\Documents\projects\VoxelEngine\VoxelEngine\VoxelEngine\bin\Debug\
 C:\Users\fjapl\Documents\projects\VoxelEngine\VoxelEngine\VoxelEngine\bin\Debug\netcoreapp3.1\OpenToolkit.Graphics.dll
 C:\Users\fjapl\Documents\projects\VoxelEngine\VoxelEngine\VoxelEngine\bin\Debug\netcoreapp3.1\OpenToolkit.GraphicsLibraryFramework.dll
 C:\Users\fjapl\Documents\projects\VoxelEngine\VoxelEngine\VoxelEngine\bin\Debug\netcoreapp3.1\OpenToolkit.Mathematics.dll
-C:\Users\fjapl\Documents\projects\VoxelEngine\VoxelEngine\VoxelEngine\bin\Debug\netcoreapp3.1\OpenToolkit.Core.pdb
-C:\Users\fjapl\Documents\projects\VoxelEngine\VoxelEngine\VoxelEngine\bin\Debug\netcoreapp3.1\OpenToolkit.Core.xml
-C:\Users\fjapl\Documents\projects\VoxelEngine\VoxelEngine\VoxelEngine\bin\Debug\netcoreapp3.1\OpenToolkit.Graphics.pdb
-C:\Users\fjapl\Documents\projects\VoxelEngine\VoxelEngine\VoxelEngine\bin\Debug\netcoreapp3.1\OpenToolkit.GraphicsLibraryFramework.pdb
-C:\Users\fjapl\Documents\projects\VoxelEngine\VoxelEngine\VoxelEngine\bin\Debug\netcoreapp3.1\OpenToolkit.GraphicsLibraryFramework.xml
-C:\Users\fjapl\Documents\projects\VoxelEngine\VoxelEngine\VoxelEngine\bin\Debug\netcoreapp3.1\OpenToolkit.GraphicsLibraryFramework.dll.config
-C:\Users\fjapl\Documents\projects\VoxelEngine\VoxelEngine\VoxelEngine\bin\Debug\netcoreapp3.1\OpenToolkit.Mathematics.pdb
-C:\Users\fjapl\Documents\projects\VoxelEngine\VoxelEngine\VoxelEngine\bin\Debug\netcoreapp3.1\OpenToolkit.Mathematics.xml
 C:\Users\fjapl\Documents\projects\VoxelEngine\VoxelEngine\VoxelEngine\obj\Debug\netcoreapp3.1\VoxelEngine.csprojAssemblyReference.cache
 C:\Users\fjapl\Documents\projects\VoxelEngine\VoxelEngine\VoxelEngine\obj\Debug\netcoreapp3.1\VoxelEngine.AssemblyInfoInputs.cache
 C:\Users\fjapl\Documents\projects\VoxelEngine\VoxelEngine\VoxelEngine\obj\Debug\netcoreapp3.1\VoxelEngine.AssemblyInfo.cs

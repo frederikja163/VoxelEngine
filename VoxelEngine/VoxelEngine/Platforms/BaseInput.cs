@@ -11,14 +11,20 @@ namespace VoxelEngine.Platforms
         
         protected void OnKeyPressed(Key key)
         {
-            _keys[key] = KeyState.Pressed;
+            if (!_keys.TryAdd(key, KeyState.Pressed))
+            {
+                _keys[key] = KeyState.Pressed;
+            }
             _keysToUpdate.Add(key);
             KeyPressed?.Invoke(key);
         }
 
         protected void OnKeyReleased(Key key)
         {
-            _keys[key] = KeyState.Released;
+            if (!_keys.TryAdd(key, KeyState.Released))
+            {
+                _keys[key] = KeyState.Released;
+            }
             _keysToUpdate.Add(key);
             KeyReleased?.Invoke(key);
         }
@@ -54,7 +60,7 @@ namespace VoxelEngine.Platforms
                 }
                 catch
                 {
-                    _keys[key] = KeyState.Up;
+                    _keys.TryAdd(key, KeyState.Up);
                     return KeyState.Up;
                 }
             }

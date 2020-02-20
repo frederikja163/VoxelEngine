@@ -1,16 +1,14 @@
 ﻿using System;
 
-namespace VoxelEngine.Layers
+namespace VoxelEngine.Gameplay
 {
-    public interface ILayer : IDisposable
+    public interface IState : IDisposable
     {
-        public void AddedToManager(AppData appData);
-        
         public void UpdateThreadInitialize() { }
 
         public void RenderThreadInitialize() { }
         
-        public void UpdateThreadTick() { }
+        public void UpdateThreadTick(float deltaT) { }
         
         public void RenderThreadTick() { }
     }
