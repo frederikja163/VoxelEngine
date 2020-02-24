@@ -1,5 +1,7 @@
 ﻿using System;
+
 using OpenToolkit;
+using OpenToolkit.Mathematics;
 
 namespace VoxelEngine.Platforms
 {
@@ -12,5 +14,11 @@ namespace VoxelEngine.Platforms
         public void MakeCurrent();
         
         public void SwapBuffers();
+        
+        public Vector2i Size { get => new Vector2i(Width, Height); }
+
+        public int Width => Size.X;
+
+        public int Height => Size.Y;
     }
 }

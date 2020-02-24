@@ -1,6 +1,5 @@
 ﻿using System.Drawing;
 using OpenToolkit;
-using VoxelEngine.Platforms;
 
 namespace VoxelEngine.Rendering
 {

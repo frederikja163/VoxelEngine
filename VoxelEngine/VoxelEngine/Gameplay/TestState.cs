@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using OpenToolkit;
 using OpenToolkit.Mathematics;
 using OpenToolkit.Graphics.OpenGL4;
 using VoxelEngine.Gameplay;
@@ -13,18 +14,18 @@ namespace VoxelEngine.Layers
         private struct Vertex
         {
             public Vector3 vPos;
-            public Vector4 vColor;
+            public Color4<Rgba> vColor;
 
             public Vertex(float x, float y, float z)
             {
                 vPos = new Vector3(x, y, z);
-                vColor = Vector4.One;
+                vColor = Color4.White;
             }
 
-            public Vertex(Vector3 pos, Color color)
+            public Vertex(Vector3 pos, Color4<Rgba> color)
             {
                 vPos = pos;
-                vColor = new Vector4(color.R, color.G, color.B, color.A) / 255f;
+                vColor = color;
             }
         }
         
@@ -45,10 +46,10 @@ namespace VoxelEngine.Layers
 
         private static readonly Vertex[] Vert = new Vertex[]
         {
-            new Vertex(new Vector3(0.5f, 0.5f, 0), Color.Gray),
-            new Vertex(new Vector3(0.5f, -0.5f, 0), Color.Gray),
-            new Vertex(new Vector3(-0.5f, -0.5f, 0), Color.Gray),
-            new Vertex(new Vector3(-0.5f, 0.5f, 0), Color.Gray)
+            new Vertex(new Vector3(0.5f, 0.5f, 0), Color4.Gray),
+            new Vertex(new Vector3(0.5f, -0.5f, 0), Color4.White),
+            new Vertex(new Vector3(-0.5f, -0.5f, 0), Color4.Black),
+            new Vertex(new Vector3(-0.5f, 0.5f, 0), Color4.Gray)
         };
 
         public TestState(AppData appData)

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace VoxelEngine.Rendering
+﻿namespace VoxelEngine.Rendering
 {
     public struct LayoutItem
     {

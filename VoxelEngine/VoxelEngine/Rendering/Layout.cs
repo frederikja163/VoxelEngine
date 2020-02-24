@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using OpenToolkit;
 using OpenToolkit.Mathematics;
 
 namespace VoxelEngine.Rendering
@@ -51,7 +52,7 @@ namespace VoxelEngine.Rendering
                     {
                         items.Add(new LayoutItem(fields[i].Name, LayoutType.Float, count * 3));
                     }
-                    else if (fields[i].FieldType == typeof(Vector4))
+                    else if (fields[i].FieldType == typeof(Vector4) || fields[i].FieldType == typeof(Color4<Rgba>))
                     {
                         items.Add(new LayoutItem(fields[i].Name, LayoutType.Float, count * 4));
                     }

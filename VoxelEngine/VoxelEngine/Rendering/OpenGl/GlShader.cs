@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Drawing;
 using System.IO;
+using OpenToolkit;
 using OpenToolkit.Mathematics;
 using OpenToolkit.Graphics.OpenGL4;
 
@@ -97,7 +97,7 @@ namespace VoxelEngine.Rendering.OpenGl
             GL.Uniform1(loc, value);
         }
 
-        public void SetUniform(string name, Color value)
+        public void SetUniform(string name, Color4<Rgba> value)
         {
             int loc = GL.GetUniformLocation(_handle, name);
             if (loc == -1)

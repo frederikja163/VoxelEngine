@@ -1,9 +1,10 @@
 ﻿using System;
 using OpenToolkit.GraphicsLibraryFramework;
+using OpenToolkit.Mathematics;
 
 namespace VoxelEngine.Platforms.Glfw
 {
-    public class GlfwWindow : IWindow
+    public sealed class GlfwWindow : IWindow
     {
         private static int _windowCount = 0;
         private readonly unsafe Window* _windowHandle;
@@ -36,6 +37,16 @@ namespace VoxelEngine.Platforms.Glfw
         public unsafe void SwapBuffers()
         {
             GLFW.SwapBuffers(_windowHandle);
+        }
+
+
+        public unsafe Vector2i Size
+        {
+            get
+            {
+                GLFW.GetWindowSize(_windowHandle, out int w, out int h);
+                return new Vector2i(w, h);
+            }
         }
 
         private unsafe void ReleaseUnmanagedResources()

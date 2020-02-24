@@ -1,7 +1,6 @@
 ﻿using System.Drawing;
 using OpenToolkit;
 using OpenToolkit.Graphics.OpenGL4;
-using VoxelEngine.Platforms;
 
 namespace VoxelEngine.Rendering.OpenGl
 {

@@ -1,5 +1,4 @@
 ﻿using System;
-using OpenToolkit.GraphicsLibraryFramework;
 using VoxelEngine.Platforms.Glfw;
 
 namespace VoxelEngine.Platforms

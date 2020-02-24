@@ -4,7 +4,7 @@ using OpenToolkit.Mathematics;
 
 namespace VoxelEngine.Platforms.Glfw
 {
-    public class GlfwInput : BaseInput
+    public sealed class GlfwInput : BaseInput
     {
         private unsafe Window* _window;
         private Vector2 _mousePos;

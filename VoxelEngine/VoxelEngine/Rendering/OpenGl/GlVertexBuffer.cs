@@ -1,5 +1,4 @@
-﻿using System;
-using OpenToolkit.Graphics.OpenGL4;
+﻿using OpenToolkit.Graphics.OpenGL4;
 
 namespace VoxelEngine.Rendering.OpenGl
 {

@@ -1,5 +1,4 @@
 ﻿using OpenToolkit.Mathematics;
-using VoxelEngine;
 
 namespace VoxelEngine.Rendering
 {

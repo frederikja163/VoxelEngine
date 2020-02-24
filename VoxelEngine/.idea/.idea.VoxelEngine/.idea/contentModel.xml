@@ -14,8 +14,9 @@
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="Gameplay" t="Include">
-          <e p="Game" t="Include" />
+          <e p="GameState.cs" t="Include" />
           <e p="IState.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
           <e p="TestState.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
