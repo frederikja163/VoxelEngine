@@ -9,16 +9,20 @@ namespace VoxelEngine.Rendering.OpenGl
     {
         private readonly int _handle;
         
-        public IVertexBuffer<TVertex> Vbo { get; }
+        public GlVertexBuffer<TVertex> GlVbo { get; }
+
+        public IVertexBuffer<TVertex> Vbo => GlVbo;
         
-        public IIndexBuffer<TIndex> Ibo { get; }
+        public GlIndexBuffer<TIndex> GlIbo { get; }
+
+        public IIndexBuffer<TIndex> Ibo => GlIbo;
 
         public Layout Layout { get; }
 
         public GlVertexArray(GlVertexBuffer<TVertex> vertices, GlIndexBuffer<TIndex> indices, Layout layout)
         {
-            Vbo = vertices;
-            Ibo = indices;
+            GlVbo = vertices;
+            GlIbo = indices;
             Layout = layout;
 
             _handle = GL.GenVertexArray();

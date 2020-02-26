@@ -9,10 +9,13 @@ namespace VoxelEngine.Rendering.OpenGl
         
         public unsafe GlIndexBuffer(TType[] data)
         {
+            Size = data.Length;
             _handle = GL.GenBuffer();
             Bind();
             GL.BufferData(BufferTarget.ElementArrayBuffer, data.Length * sizeof(TType), data, BufferUsageHint.StaticDraw);
         }
+        
+        public int Size { get; }
 
         public void Bind()
         {

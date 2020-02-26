@@ -26,39 +26,33 @@ namespace VoxelEngine.Rendering
             return layout;
         }
 
-        private static LayoutItem[] GetLayoutItems(Type type)
+        private static LayoutItem[] GetLayoutItems(Type type, string location = "")
         {
             List<LayoutItem> items = new List<LayoutItem>();
             FieldInfo[] fields = type.GetFields();
             for (int i = 0; i < fields.Length; i++)
             {
-                int count = 1;
-                if (fields[i].FieldType.IsArray)
-                {
-                    count = ((Array) fields[i].GetValue(null)).Length;
-                }
-                
                 try
                 {
-                    items.Add(new LayoutItem(fields[i].Name, GetLayoutTypeOf(fields[i].FieldType), count));
+                    items.Add(new LayoutItem(location + fields[i].Name, GetLayoutTypeOf(fields[i].FieldType), 1));
                 }
                 catch (ArgumentOutOfRangeException e)
                 {
                     if (fields[i].FieldType == typeof(Vector2))
                     {
-                        items.Add(new LayoutItem(fields[i].Name, LayoutType.Float, count * 2));
+                        items.Add(new LayoutItem(location + fields[i].Name, LayoutType.Float, 2));
                     }
                     else if (fields[i].FieldType == typeof(Vector3))
                     {
-                        items.Add(new LayoutItem(fields[i].Name, LayoutType.Float, count * 3));
+                        items.Add(new LayoutItem(location + fields[i].Name, LayoutType.Float, 3));
                     }
                     else if (fields[i].FieldType == typeof(Vector4) || fields[i].FieldType == typeof(Color4<Rgba>))
                     {
-                        items.Add(new LayoutItem(fields[i].Name, LayoutType.Float, count * 4));
+                        items.Add(new LayoutItem(location + fields[i].Name, LayoutType.Float, 4));
                     }
                     else
                     {
-                        items.AddRange(GetLayoutItems(fields[i].FieldType));
+                        items.AddRange(GetLayoutItems(fields[i].FieldType, location + fields[i].Name + "."));
                     }
                 }
             }

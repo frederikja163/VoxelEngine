@@ -2,40 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1341ea1-d939-46e8-a7ff-ac7e9b54cad0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/VoxelEngine/Gameplay/GameState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VoxelEngine/Gameplay/Player.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VoxelEngine/Assets/chunk.frag" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VoxelEngine/Assets/chunk.geom" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VoxelEngine/Assets/chunk.vert" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VoxelEngine/Gameplay/ChunkManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VoxelEngine/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VoxelEngine/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VoxelEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VoxelEngine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Deps/OpenToolkit.Graphics.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Deps/OpenToolkit.Graphics.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Deps/OpenToolkit.Mathematics.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Deps/OpenToolkit.Mathematics.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/AppData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/AppData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Application.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Application.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Gameplay/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Gameplay/GameState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Gameplay/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Gameplay/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/Gameplay/TestState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Gameplay/TestState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/Platforms/IWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Platforms/IWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/Platforms/Platform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Platforms/Platform.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/Camera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/Camera.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/IRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/IRenderer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/IShader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/IShader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/Layout.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/Layout.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/LayoutItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/LayoutItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlIndexBuffer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlIndexBuffer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlRenderer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlShader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlShader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlVertexBuffer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlVertexBuffer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/Transform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/Transform.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlVertexArray.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlVertexArray.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/Renderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/Renderer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/VoxelEngine.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/VoxelEngine.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/bin/Debug/netcoreapp3.1/OpenToolkit.Graphics.dll" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/bin/Debug/netcoreapp3.1/OpenToolkit.Graphics.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/bin/Debug/netcoreapp3.1/OpenToolkit.Mathematics.dll" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/bin/Debug/netcoreapp3.1/OpenToolkit.Mathematics.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/bin/Debug/netcoreapp3.1/VoxelEngine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/bin/Debug/netcoreapp3.1/VoxelEngine.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/bin/Debug/netcoreapp3.1/VoxelEngine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/bin/Debug/netcoreapp3.1/VoxelEngine.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/obj/VoxelEngine.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/obj/VoxelEngine.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/obj/VoxelEngine.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/obj/VoxelEngine.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/obj/project.packagespec.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +61,7 @@
     <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlShader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/IShader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/Camera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Gameplay/ChunkManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BBB3B884-123D-47EA-9CD1-5BED540D02AE/14E/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BBB3B884-123D-47EA-9CD1-5BED540D02AE/13A/Thread.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/IVertexBuffer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -109,17 +101,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/VoxelEngine/Platforms/PlatformManager.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Platforms/PlatformTypes.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Platforms/IPlatform.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Platforms/PlatformApi.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Rendering/RenderingApi.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/Renderer.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Rendering/IVertexBuffer.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Rendering/IIndexBuffer.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/VertexArray.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlLayout.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlIndexBuffer.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlVertexBuffer.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Rendering/ILayout.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Rendering/IVertexArray.cs" />
@@ -133,9 +119,6 @@
         <option value="$PROJECT_DIR$/VoxelEngine/Platforms/KeyState.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Platforms/Platform.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwPlatform.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/IRenderer.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlVertexArray.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlRenderer.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Program.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Platforms/IInput.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Extensions/MathExtensions.cs" />
@@ -145,21 +128,30 @@
         <option value="$PROJECT_DIR$/VoxelEngine/Layers/ILayer.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Gameplay/ILayer.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Gameplay/LayerManager.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/AppData.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Gameplay/IState.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Application.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Platforms/Key.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Platforms/BaseInput.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Rendering/Camera.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwInput.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwWindow.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Platforms/IWindow.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/IShader.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/AppData.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Application.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Gameplay/TestState.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlVertexArray.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlIndexBuffer.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Assets/chunk.frag" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlRenderer.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/IRenderer.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/Layout.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlShader.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Gameplay/Player.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Gameplay/GameState.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlShader.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/IShader.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/Layout.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Gameplay/TestState.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/Renderer.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Gameplay/ChunkManager.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Assets/chunk.vert" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Assets/chunk.geom" />
       </list>
     </option>
   </component>
@@ -183,6 +175,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
   </component>
   <component name="RunManager">
     <configuration name="VoxelEngine" type="DotNetProject" factoryName=".NET Project">
@@ -246,6 +239,13 @@
       <workItem from="1582490039094" duration="366000" />
       <workItem from="1582490712198" duration="780000" />
       <workItem from="1582565931389" duration="1041000" />
+      <workItem from="1582574683095" duration="627000" />
+      <workItem from="1582662638289" duration="2870000" />
+      <workItem from="1582698156362" duration="4228000" />
+      <workItem from="1582702492859" duration="798000" />
+      <workItem from="1582703320465" duration="2176000" />
+      <workItem from="1582724750046" duration="9763000" />
+      <workItem from="1582747207008" duration="1686000" />
     </task>
     <servers />
   </component>
@@ -275,122 +275,131 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582183130187" />
-    <state width="406" height="438" key="DebuggerActiveHint" timestamp="1581734689188">
+    <state x="717" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582702471657">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="717" y="324" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582702471657" />
+    <state width="465" height="438" key="DebuggerActiveHint" timestamp="1582730281050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="406" height="438" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1581734689188" />
-    <state width="1877" height="263" key="GridCell.Tab.0.bottom" timestamp="1582574663283">
+    <state width="465" height="438" key="DebuggerActiveHint/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582730281050" />
+    <state width="1877" height="263" key="GridCell.Tab.0.bottom" timestamp="1582749417415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963616" />
-    <state width="1877" height="263" key="GridCell.Tab.0.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582574663283" />
-    <state width="1877" height="263" key="GridCell.Tab.0.center" timestamp="1582574663283">
+    <state width="1877" height="263" key="GridCell.Tab.0.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
+    <state width="1877" height="263" key="GridCell.Tab.0.center" timestamp="1582749417415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963616" />
-    <state width="1877" height="263" key="GridCell.Tab.0.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582574663283" />
-    <state width="1877" height="263" key="GridCell.Tab.0.left" timestamp="1582574663283">
+    <state width="1877" height="263" key="GridCell.Tab.0.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
+    <state width="1877" height="263" key="GridCell.Tab.0.left" timestamp="1582749417415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963616" />
-    <state width="1877" height="263" key="GridCell.Tab.0.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582574663283" />
-    <state width="1877" height="263" key="GridCell.Tab.0.right" timestamp="1582574663283">
+    <state width="1877" height="263" key="GridCell.Tab.0.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
+    <state width="1877" height="263" key="GridCell.Tab.0.right" timestamp="1582749417415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963616" />
-    <state width="1877" height="263" key="GridCell.Tab.0.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582574663283" />
-    <state width="1877" height="263" key="GridCell.Tab.1.bottom" timestamp="1582574663283">
+    <state width="1877" height="263" key="GridCell.Tab.0.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
+    <state width="1877" height="263" key="GridCell.Tab.1.bottom" timestamp="1582749417415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.1.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582574663283" />
-    <state width="1877" height="263" key="GridCell.Tab.1.center" timestamp="1582574663283">
+    <state width="1877" height="263" key="GridCell.Tab.1.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
+    <state width="1877" height="263" key="GridCell.Tab.1.center" timestamp="1582749417415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.1.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582574663283" />
-    <state width="1877" height="263" key="GridCell.Tab.1.left" timestamp="1582574663283">
+    <state width="1877" height="263" key="GridCell.Tab.1.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
+    <state width="1877" height="263" key="GridCell.Tab.1.left" timestamp="1582749417415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.1.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582574663283" />
-    <state width="1877" height="263" key="GridCell.Tab.1.right" timestamp="1582574663283">
+    <state width="1877" height="263" key="GridCell.Tab.1.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
+    <state width="1877" height="263" key="GridCell.Tab.1.right" timestamp="1582749417415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.1.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582574663283" />
-    <state width="1877" height="263" key="GridCell.Tab.2.bottom" timestamp="1582574663283">
+    <state width="1877" height="263" key="GridCell.Tab.1.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
+    <state width="1877" height="263" key="GridCell.Tab.2.bottom" timestamp="1582749417415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.2.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582574663283" />
-    <state width="1877" height="263" key="GridCell.Tab.2.center" timestamp="1582574663283">
+    <state width="1877" height="263" key="GridCell.Tab.2.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
+    <state width="1877" height="263" key="GridCell.Tab.2.center" timestamp="1582749417415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.2.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582574663283" />
-    <state width="1877" height="263" key="GridCell.Tab.2.left" timestamp="1582574663283">
+    <state width="1877" height="263" key="GridCell.Tab.2.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
+    <state width="1877" height="263" key="GridCell.Tab.2.left" timestamp="1582749417415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.2.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582574663283" />
-    <state width="1877" height="263" key="GridCell.Tab.2.right" timestamp="1582574663283">
+    <state width="1877" height="263" key="GridCell.Tab.2.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
+    <state width="1877" height="263" key="GridCell.Tab.2.right" timestamp="1582749417415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.2.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582574663283" />
-    <state width="1877" height="263" key="GridCell.Tab.3.bottom" timestamp="1582574663284">
+    <state width="1877" height="263" key="GridCell.Tab.2.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
+    <state width="1877" height="263" key="GridCell.Tab.3.bottom" timestamp="1582749417415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.3.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582574663284" />
-    <state width="1877" height="263" key="GridCell.Tab.3.center" timestamp="1582574663284">
+    <state width="1877" height="263" key="GridCell.Tab.3.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
+    <state width="1877" height="263" key="GridCell.Tab.3.center" timestamp="1582749417415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.3.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582574663284" />
-    <state width="1877" height="263" key="GridCell.Tab.3.left" timestamp="1582574663284">
+    <state width="1877" height="263" key="GridCell.Tab.3.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
+    <state width="1877" height="263" key="GridCell.Tab.3.left" timestamp="1582749417415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.3.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582574663284" />
-    <state width="1877" height="263" key="GridCell.Tab.3.right" timestamp="1582574663284">
+    <state width="1877" height="263" key="GridCell.Tab.3.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
+    <state width="1877" height="263" key="GridCell.Tab.3.right" timestamp="1582749417415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.3.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582574663284" />
-    <state width="1877" height="263" key="GridCell.Tab.4.bottom" timestamp="1582574663284">
+    <state width="1877" height="263" key="GridCell.Tab.3.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
+    <state width="1877" height="263" key="GridCell.Tab.4.bottom" timestamp="1582749417415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.4.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.4.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582574663284" />
-    <state width="1877" height="263" key="GridCell.Tab.4.center" timestamp="1582574663284">
+    <state width="1877" height="263" key="GridCell.Tab.4.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
+    <state width="1877" height="263" key="GridCell.Tab.4.center" timestamp="1582749417415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.4.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.4.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582574663284" />
-    <state width="1877" height="263" key="GridCell.Tab.4.left" timestamp="1582574663284">
+    <state width="1877" height="263" key="GridCell.Tab.4.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
+    <state width="1877" height="263" key="GridCell.Tab.4.left" timestamp="1582749417415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.4.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.4.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582574663284" />
-    <state width="1877" height="263" key="GridCell.Tab.4.right" timestamp="1582574663284">
+    <state width="1877" height="263" key="GridCell.Tab.4.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
+    <state width="1877" height="263" key="GridCell.Tab.4.right" timestamp="1582749417415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.4.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.4.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582574663284" />
-    <state x="552" y="253" key="Rider.ProjectTemplateDialog.Size" timestamp="1581949909729">
+    <state width="1877" height="263" key="GridCell.Tab.4.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
+    <state x="552" y="253" key="Rider.ProjectTemplateDialog.Size" timestamp="1582665500745">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Rider.ProjectTemplateDialog.Size/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1581949909729" />
-    <state x="832" y="222" key="RiderGenerateDialog" timestamp="1582366150480">
+    <state x="552" y="253" key="Rider.ProjectTemplateDialog.Size/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582665500745" />
+    <state x="832" y="222" key="RiderGenerateDialog" timestamp="1582699815809">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="832" y="222" key="RiderGenerateDialog/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582366150480" />
-    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1582180511876">
+    <state x="832" y="222" key="RiderGenerateDialog/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582699815809" />
+    <state x="461" y="163" key="SettingsEditor" timestamp="1582701611099">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="968" height="528" key="XDebugger.FullValuePopup/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582180511876" />
+    <state x="461" y="163" key="SettingsEditor/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582701611099" />
+    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1582741318005">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="968" height="528" key="XDebugger.FullValuePopup/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582741318005" />
     <state x="619" y="190" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1582186693793">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -34,3 +34,6 @@ C:\Users\fjapl\Documents\VoxelEngine\VoxelEngine\VoxelEngine\obj\Debug\netcoreap
 C:\Users\fjapl\Documents\VoxelEngine\VoxelEngine\VoxelEngine\obj\Debug\netcoreapp3.1\VoxelEngine.csproj.CopyComplete
 C:\Users\fjapl\Documents\VoxelEngine\VoxelEngine\VoxelEngine\obj\Debug\netcoreapp3.1\VoxelEngine.dll
 C:\Users\fjapl\Documents\VoxelEngine\VoxelEngine\VoxelEngine\obj\Debug\netcoreapp3.1\VoxelEngine.pdb
+C:\Users\fjapl\Documents\projects\VoxelEngine\VoxelEngine\VoxelEngine\bin\Debug\netcoreapp3.1\Assets\chunk.frag
+C:\Users\fjapl\Documents\projects\VoxelEngine\VoxelEngine\VoxelEngine\bin\Debug\netcoreapp3.1\Assets\chunk.geom
+C:\Users\fjapl\Documents\projects\VoxelEngine\VoxelEngine\VoxelEngine\bin\Debug\netcoreapp3.1\Assets\chunk.vert

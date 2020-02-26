@@ -9,11 +9,15 @@
         <e p="AppData.cs" t="Include" />
         <e p="Application.cs" t="Include" />
         <e p="Assets" t="Include">
+          <e p="chunk.frag" t="Include" />
+          <e p="chunk.geom" t="Include" />
+          <e p="chunk.vert" t="Include" />
           <e p="fragment.glsl" t="Include" />
           <e p="vertex.glsl" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="Gameplay" t="Include">
+          <e p="ChunkManager.cs" t="Include" />
           <e p="GameState.cs" t="Include" />
           <e p="IState.cs" t="Include" />
           <e p="Player.cs" t="Include" />

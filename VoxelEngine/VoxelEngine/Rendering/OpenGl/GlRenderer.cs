@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.Diagnostics;
+using System.Drawing;
 using OpenToolkit;
 using OpenToolkit.Graphics.OpenGL4;
 
@@ -49,34 +50,42 @@ namespace VoxelEngine.Rendering.OpenGl
         public IVertexArray<TVertex, TIndex> CreateVertexArray<TVertex, TIndex>(
             TVertex[] vertices,
             TIndex[] indices,
-            Layout? layout = null)
+            Layout layout)
                 where TVertex : unmanaged
                 where TIndex : unmanaged
         {
             return CreateVertexArray(CreateVertexBuffer(vertices), CreateIndexBuffer(indices), layout);
         }
 
-        public IVertexArray<TVertex, TIndex> CreateVertexArray<TVertex, TIndex>(
-            IVertexBuffer<TVertex> vertices,
+        public IVertexArray<TVertex, TIndex> CreateVertexArray<TVertex, TIndex>(IVertexBuffer<TVertex> vertices,
             IIndexBuffer<TIndex> indices,
-            Layout? layout = null)
+            Layout layout)
                 where TVertex : unmanaged
                 where TIndex : unmanaged
         {
             GlVertexBuffer<TVertex> vert = vertices as GlVertexBuffer<TVertex>;
             GlIndexBuffer<TIndex> ind = indices as GlIndexBuffer<TIndex>;
-            
-            if (layout == null)
-            {
-                layout = new Layout();
-            }
 
-            return new GlVertexArray<TVertex, TIndex>(vert, ind, layout.Value);
+            return new GlVertexArray<TVertex, TIndex>(vert, ind, layout);
         }
 
         public IShader CreateShader(string vertexPath, string fragmentPath)
         {
             return new GlShader(vertexPath, fragmentPath);
+        }
+
+        public IShader CreateShader(string vertexPath, string geometryPath, string fragmentPath)
+        {
+            return new GlShader(vertexPath, geometryPath, fragmentPath);
+        }
+
+        public void Submit<TVertex, TIndex>(IShader shader, IVertexArray<TVertex, TIndex> vertexArray) where TVertex : unmanaged where TIndex : unmanaged
+        {
+            GlIndexBuffer<TIndex> ibo = (vertexArray as GlVertexArray<TVertex, TIndex>)?.GlIbo;
+
+            shader.Bind();
+            vertexArray.Bind();
+            GL.DrawElements(PrimitiveType.Points, ibo.Size, DrawElementsType.UnsignedInt, 0);
         }
     }
 }

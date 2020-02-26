@@ -20,17 +20,22 @@ namespace VoxelEngine.Rendering
         public IVertexArray<TVertex, TIndex> CreateVertexArray<TVertex, TIndex>(
             TVertex[] vertices,
             TIndex[] indices,
-            Layout? layout = null)
+            Layout layout)
                 where TVertex : unmanaged
                 where TIndex : unmanaged;
         
-        public IVertexArray<TVertex, TIndex> CreateVertexArray<TVertex, TIndex>(
-            IVertexBuffer<TVertex> vertices,
+        public IVertexArray<TVertex, TIndex> CreateVertexArray<TVertex, TIndex>(IVertexBuffer<TVertex> vertices,
             IIndexBuffer<TIndex> indices,
-            Layout? layout = null)
+            Layout layout)
                 where TVertex : unmanaged
                 where TIndex : unmanaged;
 
         public IShader CreateShader(string vertexPath, string fragmentPath);
+        
+        public IShader CreateShader(string vertexPath, string geometryPath, string fragmentPath);
+        
+        public void Submit<TVertex, TIndex>(IShader shader, IVertexArray<TVertex, TIndex> vertexArray)
+            where TVertex : unmanaged
+            where TIndex : unmanaged;
     }
 }

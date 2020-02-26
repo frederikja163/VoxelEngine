@@ -60,12 +60,12 @@ namespace VoxelEngine.Rendering
             set => _fov = value;
         }
 
-        public Matrix4 GetViewMatrix()
+        public Matrix4 CreateViewMatrix()
         {
             return Matrix4.LookAt(Position, Position + _front, _up);
         }
 
-        public Matrix4 GetProjectionMatrix()
+        public Matrix4 CreateProjectionMatrix()
         {
             return Matrix4.CreatePerspectiveFieldOfView(_fov, AspectRatio, 0.01f, 100f);
         }

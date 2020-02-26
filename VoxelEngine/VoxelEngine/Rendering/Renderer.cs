@@ -1,17 +1,78 @@
 ﻿using System;
+using System.Drawing;
+using OpenToolkit;
 using VoxelEngine.Rendering.OpenGl;
 
 namespace VoxelEngine.Rendering
 {
-    public static class Renderer
+    public class Renderer : IRenderer
     {
-        public static IRenderer CreateRenderer(RenderingApi renderer)
+        private IRenderer _rendererImplementation;
+
+        public Camera Camera { get; set; }
+        
+        public Renderer(RenderingApi renderingApi)
         {
-            return renderer switch
+            _rendererImplementation = renderingApi switch
             {
                 RenderingApi.OpenGl => new GlRenderer(),
-                _ => throw new ArgumentOutOfRangeException(nameof(renderer), renderer, null)
+                _ => throw new ArgumentOutOfRangeException(nameof(renderingApi), renderingApi, null)
             };
+        }
+
+        public void LoadBindings(IBindingsContext context)
+        {
+            _rendererImplementation.LoadBindings(context);
+        }
+
+        public Color ClearColor
+        {
+            get => _rendererImplementation.ClearColor;
+            set => _rendererImplementation.ClearColor = value;
+        }
+
+        public void Clear()
+        {
+            _rendererImplementation.Clear();
+        }
+
+        public IVertexBuffer<TType> CreateVertexBuffer<TType>(TType[] data) where TType : unmanaged
+        {
+            return _rendererImplementation.CreateVertexBuffer(data);
+        }
+
+        public IIndexBuffer<TType> CreateIndexBuffer<TType>(TType[] data) where TType : unmanaged
+        {
+            return _rendererImplementation.CreateIndexBuffer(data);
+        }
+
+        public IVertexArray<TVertex, TIndex> CreateVertexArray<TVertex, TIndex>(TVertex[] vertices, TIndex[] indices, Layout layout) where TVertex : unmanaged where TIndex : unmanaged
+        {
+            return _rendererImplementation.CreateVertexArray(vertices, indices, layout);
+        }
+
+        public IVertexArray<TVertex, TIndex> CreateVertexArray<TVertex, TIndex>(IVertexBuffer<TVertex> vertices,
+            IIndexBuffer<TIndex> indices, Layout layout) where TVertex : unmanaged where TIndex : unmanaged
+        {
+            return _rendererImplementation.CreateVertexArray(vertices, indices, layout);
+        }
+
+        public IShader CreateShader(string vertexPath, string fragmentPath)
+        {
+            return _rendererImplementation.CreateShader(vertexPath, fragmentPath);
+        }
+        
+        public IShader CreateShader(string vertexPath, string geometryPath, string fragmentPath)
+        {
+            return _rendererImplementation.CreateShader(vertexPath, geometryPath, fragmentPath);
+        }
+
+        public void Submit<TVertex, TIndex>(IShader shader, IVertexArray<TVertex, TIndex> vertexArray) where TVertex : unmanaged where TIndex : unmanaged
+        {
+            shader.Bind();
+            shader.SetUniform("uView", Camera.CreateViewMatrix());
+            shader.SetUniform("uProjection", Camera.CreateProjectionMatrix());
+            _rendererImplementation.Submit(shader, vertexArray);
         }
     }
 }

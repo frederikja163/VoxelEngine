@@ -29,13 +29,46 @@ namespace VoxelEngine.Rendering.OpenGl
             int vert = CreateShader(vertexPath, ShaderType.VertexShader);
             int frag= CreateShader(fragmentPath, ShaderType.FragmentShader);
             
-            GL.AttachShader(_handle, frag);
             GL.AttachShader(_handle, vert);
+            GL.AttachShader(_handle, frag);
             GL.LinkProgram(_handle);
             GL.DetachShader(_handle, vert);
             GL.DeleteShader(vert);
             GL.DetachShader(_handle, frag);
             GL.DeleteShader(frag);
+        }
+        
+        public GlShader(string vertexPath, string geometryPath, string fragmentPath)
+        {
+            
+            _handle = GL.CreateProgram();
+
+            int vert = CreateShader(vertexPath, ShaderType.VertexShader);
+            int geo= CreateShader(geometryPath, ShaderType.GeometryShader);
+            int frag= CreateShader(fragmentPath, ShaderType.FragmentShader);
+            
+            GL.AttachShader(_handle, vert);
+            GL.AttachShader(_handle, geo);
+            GL.AttachShader(_handle, frag);
+            GL.LinkProgram(_handle);
+            GL.DetachShader(_handle, vert);
+            GL.DeleteShader(vert);
+            GL.DetachShader(_handle, geo);
+            GL.DeleteShader(geo);
+            GL.DetachShader(_handle, frag);
+            GL.DeleteShader(frag);
+        }
+        private int CreateShader(string path, ShaderType type)
+        {
+            int shader = GL.CreateShader(type);
+            GL.ShaderSource(shader, File.ReadAllText(path));
+            GL.CompileShader(shader);
+            GL.GetShaderInfoLog(shader, out string log);
+            if (log.Length != 0)
+            {
+                throw new Exception(log);
+            }
+            return shader;
         }
 
         public void Dispose()
@@ -60,8 +93,7 @@ namespace VoxelEngine.Rendering.OpenGl
             {
                 throw new ArgumentException($"{name} is not a valid uniform name on the shader.");
             }
-            Bind();
-            GL.Uniform1(loc, value);
+            GL.ProgramUniform1(_handle, loc, value);
         }
 
         public void SetUniform(string name, short value)
@@ -71,8 +103,7 @@ namespace VoxelEngine.Rendering.OpenGl
             {
                 throw new ArgumentException($"{name} is not a valid uniform name on the shader.");
             }
-            Bind();
-            GL.Uniform1(loc, value);
+            GL.ProgramUniform1(_handle, loc, value);
         }
 
         public void SetUniform(string name, int value)
@@ -82,8 +113,7 @@ namespace VoxelEngine.Rendering.OpenGl
             {
                 throw new ArgumentException($"{name} is not a valid uniform name on the shader.");
             }
-            Bind();
-            GL.Uniform1(loc, value);
+            GL.ProgramUniform1(_handle, loc, value);
         }
 
         public void SetUniform(string name, float value)
@@ -93,8 +123,7 @@ namespace VoxelEngine.Rendering.OpenGl
             {
                 throw new ArgumentException($"{name} is not a valid uniform name on the shader.");
             }
-            Bind();
-            GL.Uniform1(loc, value);
+            GL.ProgramUniform1(_handle, loc, value);
         }
 
         public void SetUniform(string name, Color4<Rgba> value)
@@ -104,8 +133,7 @@ namespace VoxelEngine.Rendering.OpenGl
             {
                 throw new ArgumentException($"{name} is not a valid uniform name on the shader.");
             }
-            Bind();
-            GL.Uniform4(loc, value);
+            GL.ProgramUniform4(_handle, loc, value);
         }
 
         public void SetUniform(string name, Vector2 value)
@@ -115,8 +143,7 @@ namespace VoxelEngine.Rendering.OpenGl
             {
                 throw new ArgumentException($"{name} is not a valid uniform name on the shader.");
             }
-            Bind();
-            GL.Uniform2(loc, value.X, value.Y);
+            GL.ProgramUniform2(_handle, loc, value);
         }
 
         public void SetUniform(string name, Vector3 value)
@@ -126,8 +153,7 @@ namespace VoxelEngine.Rendering.OpenGl
             {
                 throw new ArgumentException($"{name} is not a valid uniform name on the shader.");
             }
-            Bind();
-            GL.Uniform3(loc, value.X, value.Y, value.Y);
+            GL.ProgramUniform3(_handle, loc, value);
         }
 
         public void SetUniform(string name, Vector4 value)
@@ -137,8 +163,7 @@ namespace VoxelEngine.Rendering.OpenGl
             {
                 throw new ArgumentException($"{name} is not a valid uniform name on the shader.");
             }
-            Bind();
-            GL.Uniform4(loc, value.X, value.Y, value.Z, value.W);
+            GL.ProgramUniform4(_handle, loc, value);
         }
 
         public void SetUniform(string name, Matrix4 value)
@@ -148,9 +173,8 @@ namespace VoxelEngine.Rendering.OpenGl
             {
                 throw new ArgumentException($"{name} is not a valid uniform name on the shader.");
             }
-            Bind();
             Matrix4 v = value;
-            GL.UniformMatrix4(loc, false, ref v);
+            GL.ProgramUniformMatrix4(_handle, loc, false, ref v);
         }
     }
 }

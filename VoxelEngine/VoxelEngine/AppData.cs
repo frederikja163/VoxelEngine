@@ -7,9 +7,9 @@ namespace VoxelEngine
     {
         public IWindow Window { get; }
         
-        public IRenderer Renderer { get; }
+        public Renderer Renderer { get; }
         
-        public AppData(IWindow window, IRenderer renderer)
+        public AppData(IWindow window, Renderer renderer)
         {
             Window = window;
             Renderer = renderer;

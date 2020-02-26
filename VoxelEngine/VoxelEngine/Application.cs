@@ -27,8 +27,8 @@ namespace VoxelEngine
         public Application()
         {
             _appData = new AppData(Platform.CreateWindow(PlatformApi.GlfwDesktop),
-                Renderer.CreateRenderer(RenderingApi.OpenGl));
-            _state = new TestState(_appData);
+                new Renderer(RenderingApi.OpenGl));
+            _state = new GameState(_appData);
         }
 
         public void Run()

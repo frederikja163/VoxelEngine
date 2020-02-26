@@ -132,8 +132,8 @@ namespace VoxelEngine.Layers
         {
             _shader.Bind();
             _shader.SetUniform("uModel", _transform.CreateMatrix());
-            _shader.SetUniform("uView", _camera.GetViewMatrix());
-            _shader.SetUniform("uProjection", _camera.GetProjectionMatrix());
+            _shader.SetUniform("uView", _camera.CreateViewMatrix());
+            _shader.SetUniform("uProjection", _camera.CreateProjectionMatrix());
             GL.DrawElements(PrimitiveType.Triangles, 6, DrawElementsType.UnsignedInt, 0);
             _shader.SetUniform("uModel", Matrix4.Identity);
             GL.DrawElements(PrimitiveType.Triangles, 6, DrawElementsType.UnsignedInt, 0);
