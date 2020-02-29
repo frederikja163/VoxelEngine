@@ -2,29 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1341ea1-d939-46e8-a7ff-ac7e9b54cad0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/VoxelEngine/Assets/chunk.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VoxelEngine/Assets/chunk.geom" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VoxelEngine/Assets/chunk.vert" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VoxelEngine/Gameplay/ChunkManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Deps/glfw3.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VoxelEngine/Core/IState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VoxelEngine/Platforms/Window.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/IUniformBuffer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlUniformBuffer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VoxelProgram/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VoxelProgram/VoxelProgram.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VoxelEngine/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VoxelEngine/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VoxelEngine/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VoxelEngine/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/AppData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/AppData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/Application.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Application.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/Gameplay/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Gameplay/GameState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/Gameplay/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Gameplay/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/Gameplay/TestState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Gameplay/TestState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/Camera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/Camera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine.sln" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/AppData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Core/AppData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Application.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Core/Application.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Assets/chunk.frag" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelProgram/Assets/chunk.frag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Assets/chunk.geom" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelProgram/Assets/chunk.geom" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Assets/chunk.vert" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelProgram/Assets/chunk.vert" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Assets/fragment.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelProgram/Assets/fragment.glsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Assets/vertex.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelProgram/Assets/vertex.glsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Gameplay/ChunkManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelProgram/ChunkManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Gameplay/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelProgram/GameState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Gameplay/IState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Gameplay/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelProgram/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Gameplay/TestState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Platforms/IWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Platforms/IWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Platforms/Platform.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Program.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/IRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/IRenderer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/Layout.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/Layout.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlIndexBuffer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlIndexBuffer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlRenderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlRenderer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlShader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlShader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlVertexArray.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlVertexArray.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/Renderer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/Renderer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlVertexBuffer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlVertexBuffer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/VoxelEngine.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/VoxelEngine.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/bin/Debug/netcoreapp3.1/VoxelEngine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/bin/Debug/netcoreapp3.1/VoxelEngine.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/bin/Debug/netcoreapp3.1/VoxelEngine.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/bin/Debug/netcoreapp3.1/VoxelEngine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/bin/Debug/netcoreapp3.1/VoxelEngine.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/bin/Debug/netcoreapp3.1/VoxelEngine.runtimeconfig.dev.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/bin/Debug/netcoreapp3.1/VoxelEngine.runtimeconfig.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/VoxelEngine/obj/Debug/netcoreapp3.1/VoxelEngine.pdb" afterDir="false" />
     </list>
@@ -52,16 +70,33 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Gameplay/TestState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Core/Application.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/Window.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/Camera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelProgram/ChunkManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelProgram/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/Renderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/RenderingApi.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/KeyState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/IRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/PlatformApi.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/IInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/IWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Core/AppData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/BaseInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/MouseButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9E840810-1A96-423E-912D-7D0EB8E144B8/22/d366b3a1/Keys.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/85F16981-A516-4FB6-8FFE-4CE7E9C1A167/B/Color.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BBB3B884-123D-47EA-9CD1-5BED540D02AE/3DC/List.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Core/IState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/Key.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Application.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Assets/fragment.glsl" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Assets/vertex.glsl" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelProgram/Assets/fragment.glsl" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelProgram/Assets/vertex.glsl" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BBB3B884-123D-47EA-9CD1-5BED540D02AE/1E0/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlShader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/IShader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/Camera.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Gameplay/ChunkManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BBB3B884-123D-47EA-9CD1-5BED540D02AE/14E/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BBB3B884-123D-47EA-9CD1-5BED540D02AE/13A/Thread.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/IVertexBuffer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -72,52 +107,25 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BBB3B884-123D-47EA-9CD1-5BED540D02AE/8C/Int32.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlIndexBuffer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/LayoutType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlRenderer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/LayoutItem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Gameplay/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelProgram/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6D02E760-C9FE-42E8-B445-2A38CF45B374/7/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Gameplay/GameState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/Renderer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/RenderingApi.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/KeyState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/IRenderer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelProgram/GameState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlVertexArray.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/Layout.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/IVertexArray.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/PlatformApi.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/Platform.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/IInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/IWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/AppData.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/BaseInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Platforms/MouseButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9E840810-1A96-423E-912D-7D0EB8E144B8/22/d366b3a1/Keys.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/85F16981-A516-4FB6-8FFE-4CE7E9C1A167/B/Color.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/BBB3B884-123D-47EA-9CD1-5BED540D02AE/3DC/List.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/VoxelEngine/Gameplay/IState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/IUniformBuffer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlUniformBuffer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/RenderingApi.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/IVertexBuffer.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/IIndexBuffer.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/VertexArray.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlLayout.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlVertexBuffer.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/ILayout.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/IVertexArray.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/LayoutType.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Layers/LayerManager.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Rendering/LayoutItem.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Assets/fragment.glsl" />
         <option value="$PROJECT_DIR$/VoxelEngine/Transform.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Camera.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Platforms/MouseButton.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Platforms/KeyState.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Platforms/Platform.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwPlatform.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Program.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Platforms/IInput.cs" />
@@ -128,30 +136,41 @@
         <option value="$PROJECT_DIR$/VoxelEngine/Layers/ILayer.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Gameplay/ILayer.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Gameplay/LayerManager.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Gameplay/IState.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Platforms/Key.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Platforms/BaseInput.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Rendering/Camera.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwInput.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwWindow.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Platforms/IWindow.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Rendering/IShader.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/AppData.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Application.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Gameplay/TestState.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlVertexArray.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlIndexBuffer.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Assets/chunk.frag" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlRenderer.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/IRenderer.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Rendering/Layout.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlShader.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Gameplay/Player.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Gameplay/GameState.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Rendering/Renderer.cs" />
-        <option value="$PROJECT_DIR$/VoxelEngine/Gameplay/ChunkManager.cs" />
         <option value="$PROJECT_DIR$/VoxelEngine/Assets/chunk.vert" />
         <option value="$PROJECT_DIR$/VoxelEngine/Assets/chunk.geom" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Gameplay/ChunkManager.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/IUniformBuffer.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Gameplay/IState.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Platforms/Platform.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/AppData.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Application.cs" />
+        <option value="$PROJECT_DIR$/VoxelProgram/Program.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Platforms/Window.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwInput.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Platforms/Glfw/GlfwWindow.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlIndexBuffer.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlRenderer.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlShader.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlUniformBuffer.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlVertexArray.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/OpenGl/GlVertexBuffer.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Gameplay/GameState.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Gameplay/Player.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Platforms/IWindow.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Rendering/IRenderer.cs" />
+        <option value="$PROJECT_DIR$/VoxelProgram/ChunkManager.cs" />
+        <option value="$PROJECT_DIR$/VoxelProgram/TestState.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Core/IState.cs" />
+        <option value="$PROJECT_DIR$/VoxelEngine/Core/Application.cs" />
+        <option value="$PROJECT_DIR$/VoxelProgram/GameState.cs" />
       </list>
     </option>
   </component>
@@ -178,20 +197,20 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
   </component>
   <component name="RunManager">
-    <configuration name="VoxelEngine" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
+    <configuration name="VoxelProgram" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/VoxelProgram/bin/Debug/netcoreapp3.1/VoxelProgram.dll" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/VoxelProgram/bin/Debug/netcoreapp3.1" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/VoxelEngine/VoxelEngine.csproj" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/VoxelProgram/VoxelProgram.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="DotNetCore" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v3.1" />
       <method v="2">
         <option name="Build" enabled="true" />
       </method>
@@ -246,6 +265,9 @@
       <workItem from="1582703320465" duration="2176000" />
       <workItem from="1582724750046" duration="9763000" />
       <workItem from="1582747207008" duration="1686000" />
+      <workItem from="1582749641867" duration="840000" />
+      <workItem from="1582785445057" duration="1113000" />
+      <workItem from="1582974051096" duration="9462000" />
     </task>
     <servers />
   </component>
@@ -271,10 +293,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582183130187">
+    <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582989583732">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582183130187" />
+    <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582989583732" />
     <state x="717" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582702471657">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -284,114 +306,114 @@
     </state>
     <state width="406" height="438" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1581734689188" />
     <state width="465" height="438" key="DebuggerActiveHint/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582730281050" />
-    <state width="1877" height="263" key="GridCell.Tab.0.bottom" timestamp="1582749417415">
+    <state width="1877" height="263" key="GridCell.Tab.0.bottom" timestamp="1582994438377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963616" />
-    <state width="1877" height="263" key="GridCell.Tab.0.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
-    <state width="1877" height="263" key="GridCell.Tab.0.center" timestamp="1582749417415">
+    <state width="1877" height="263" key="GridCell.Tab.0.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582994438377" />
+    <state width="1877" height="263" key="GridCell.Tab.0.center" timestamp="1582994438377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963616" />
-    <state width="1877" height="263" key="GridCell.Tab.0.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
-    <state width="1877" height="263" key="GridCell.Tab.0.left" timestamp="1582749417415">
+    <state width="1877" height="263" key="GridCell.Tab.0.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582994438377" />
+    <state width="1877" height="263" key="GridCell.Tab.0.left" timestamp="1582994438377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963616" />
-    <state width="1877" height="263" key="GridCell.Tab.0.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
-    <state width="1877" height="263" key="GridCell.Tab.0.right" timestamp="1582749417415">
+    <state width="1877" height="263" key="GridCell.Tab.0.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582994438377" />
+    <state width="1877" height="263" key="GridCell.Tab.0.right" timestamp="1582994438377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963616" />
-    <state width="1877" height="263" key="GridCell.Tab.0.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
-    <state width="1877" height="263" key="GridCell.Tab.1.bottom" timestamp="1582749417415">
+    <state width="1877" height="263" key="GridCell.Tab.0.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582994438377" />
+    <state width="1877" height="263" key="GridCell.Tab.1.bottom" timestamp="1582994438302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.1.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
-    <state width="1877" height="263" key="GridCell.Tab.1.center" timestamp="1582749417415">
+    <state width="1877" height="263" key="GridCell.Tab.1.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582994438302" />
+    <state width="1877" height="263" key="GridCell.Tab.1.center" timestamp="1582994438302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.1.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
-    <state width="1877" height="263" key="GridCell.Tab.1.left" timestamp="1582749417415">
+    <state width="1877" height="263" key="GridCell.Tab.1.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582994438302" />
+    <state width="1877" height="263" key="GridCell.Tab.1.left" timestamp="1582994438302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.1.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
-    <state width="1877" height="263" key="GridCell.Tab.1.right" timestamp="1582749417415">
+    <state width="1877" height="263" key="GridCell.Tab.1.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582994438302" />
+    <state width="1877" height="263" key="GridCell.Tab.1.right" timestamp="1582994438302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.1.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
-    <state width="1877" height="263" key="GridCell.Tab.2.bottom" timestamp="1582749417415">
+    <state width="1877" height="263" key="GridCell.Tab.1.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582994438302" />
+    <state width="1877" height="263" key="GridCell.Tab.2.bottom" timestamp="1582994438302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.2.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
-    <state width="1877" height="263" key="GridCell.Tab.2.center" timestamp="1582749417415">
+    <state width="1877" height="263" key="GridCell.Tab.2.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582994438302" />
+    <state width="1877" height="263" key="GridCell.Tab.2.center" timestamp="1582994438302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.2.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
-    <state width="1877" height="263" key="GridCell.Tab.2.left" timestamp="1582749417415">
+    <state width="1877" height="263" key="GridCell.Tab.2.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582994438302" />
+    <state width="1877" height="263" key="GridCell.Tab.2.left" timestamp="1582994438302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.2.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
-    <state width="1877" height="263" key="GridCell.Tab.2.right" timestamp="1582749417415">
+    <state width="1877" height="263" key="GridCell.Tab.2.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582994438302" />
+    <state width="1877" height="263" key="GridCell.Tab.2.right" timestamp="1582994438302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.2.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
-    <state width="1877" height="263" key="GridCell.Tab.3.bottom" timestamp="1582749417415">
+    <state width="1877" height="263" key="GridCell.Tab.2.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582994438302" />
+    <state width="1877" height="263" key="GridCell.Tab.3.bottom" timestamp="1582994438302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.3.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
-    <state width="1877" height="263" key="GridCell.Tab.3.center" timestamp="1582749417415">
+    <state width="1877" height="263" key="GridCell.Tab.3.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582994438302" />
+    <state width="1877" height="263" key="GridCell.Tab.3.center" timestamp="1582994438302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.3.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
-    <state width="1877" height="263" key="GridCell.Tab.3.left" timestamp="1582749417415">
+    <state width="1877" height="263" key="GridCell.Tab.3.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582994438302" />
+    <state width="1877" height="263" key="GridCell.Tab.3.left" timestamp="1582994438302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.3.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
-    <state width="1877" height="263" key="GridCell.Tab.3.right" timestamp="1582749417415">
+    <state width="1877" height="263" key="GridCell.Tab.3.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582994438302" />
+    <state width="1877" height="263" key="GridCell.Tab.3.right" timestamp="1582994438302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.3.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
-    <state width="1877" height="263" key="GridCell.Tab.4.bottom" timestamp="1582749417415">
+    <state width="1877" height="263" key="GridCell.Tab.3.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582994438302" />
+    <state width="1877" height="263" key="GridCell.Tab.4.bottom" timestamp="1582994438302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.4.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.4.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
-    <state width="1877" height="263" key="GridCell.Tab.4.center" timestamp="1582749417415">
+    <state width="1877" height="263" key="GridCell.Tab.4.bottom/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582994438302" />
+    <state width="1877" height="263" key="GridCell.Tab.4.center" timestamp="1582994438302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.4.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.4.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
-    <state width="1877" height="263" key="GridCell.Tab.4.left" timestamp="1582749417415">
+    <state width="1877" height="263" key="GridCell.Tab.4.center/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582994438302" />
+    <state width="1877" height="263" key="GridCell.Tab.4.left" timestamp="1582994438302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.4.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.4.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
-    <state width="1877" height="263" key="GridCell.Tab.4.right" timestamp="1582749417415">
+    <state width="1877" height="263" key="GridCell.Tab.4.left/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582994438302" />
+    <state width="1877" height="263" key="GridCell.Tab.4.right" timestamp="1582994438302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="263" key="GridCell.Tab.4.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581735963523" />
-    <state width="1877" height="263" key="GridCell.Tab.4.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582749417415" />
-    <state x="552" y="253" key="Rider.ProjectTemplateDialog.Size" timestamp="1582665500745">
+    <state width="1877" height="263" key="GridCell.Tab.4.right/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582994438302" />
+    <state x="552" y="253" key="Rider.ProjectTemplateDialog.Size" timestamp="1582982403240">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Rider.ProjectTemplateDialog.Size/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582665500745" />
-    <state x="832" y="222" key="RiderGenerateDialog" timestamp="1582699815809">
+    <state x="552" y="253" key="Rider.ProjectTemplateDialog.Size/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582982403240" />
+    <state x="832" y="222" key="RiderGenerateDialog" timestamp="1582992193290">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="832" y="222" key="RiderGenerateDialog/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582699815809" />
+    <state x="832" y="222" key="RiderGenerateDialog/1920.0.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1582992193290" />
     <state x="461" y="163" key="SettingsEditor" timestamp="1582701611099">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

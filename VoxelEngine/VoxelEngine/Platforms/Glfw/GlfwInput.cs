@@ -4,13 +4,13 @@ using OpenToolkit.Mathematics;
 
 namespace VoxelEngine.Platforms.Glfw
 {
-    public sealed class GlfwInput : BaseInput
+    internal sealed class GlfwInput : BaseInput
     {
-        private unsafe Window* _window;
+        private readonly unsafe OpenToolkit.GraphicsLibraryFramework.Window* _window;
         private Vector2 _mousePos;
         private bool _isCenterMode;
         
-        public unsafe GlfwInput(Window* window)
+        public unsafe GlfwInput(OpenToolkit.GraphicsLibraryFramework.Window* window)
         {
             _window = window;
             
@@ -21,7 +21,7 @@ namespace VoxelEngine.Platforms.Glfw
             GLFW.SetCursorPosCallback(window, MouseEvent);
         }
         
-        private unsafe void KeyEvent(Window* window1, Keys key, int code, InputAction action,KeyModifiers mods)
+        private unsafe void KeyEvent(OpenToolkit.GraphicsLibraryFramework.Window* window1, Keys key, int code, InputAction action,KeyModifiers mods)
         {
             Key? k = GlfwKeyToKey(key);
             if (k != null)
@@ -37,7 +37,7 @@ namespace VoxelEngine.Platforms.Glfw
             }
         }
         
-        private unsafe void MouseEvent(Window* window1, double x, double y)
+        private unsafe void MouseEvent(OpenToolkit.GraphicsLibraryFramework.Window* window1, double x, double y)
         {
             Vector2 newMouse = new Vector2((float) x, (float) y);
             MouseMoved?.Invoke(_mousePos - newMouse);

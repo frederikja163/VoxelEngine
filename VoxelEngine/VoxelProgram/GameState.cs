@@ -1,12 +1,12 @@
-﻿using OpenToolkit;
+﻿using VoxelEngine.Core;
 using VoxelEngine.Platforms;
 using VoxelEngine.Rendering;
 
-namespace VoxelEngine.Gameplay
+namespace VoxelProgram
 {
     public class GameState : IState
     {
-        private readonly IWindow _window;
+        private readonly Window _window;
         private readonly Renderer _renderer;
         private readonly Player _player;
         private readonly ChunkManager _chunkManager;
@@ -28,18 +28,18 @@ namespace VoxelEngine.Gameplay
             _chunkManager = new ChunkManager(_renderer);
         }
         
-        public void UpdateThreadTick(float deltaT)
+        public void Update(float deltaT)
         {
             _player.Update(deltaT);
         }
 
-        public void RenderThreadInitialize()
+        public void Initialize(AppData data)
         {
             _renderer.Camera = _player.Camera;
             _chunkManager.Initialize();
         }
 
-        public void RenderThreadTick()
+        public void Render()
         {
             _chunkManager.Render();
         }

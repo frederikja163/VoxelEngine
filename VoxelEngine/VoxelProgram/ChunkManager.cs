@@ -1,7 +1,7 @@
 ﻿using OpenToolkit.Mathematics;
 using VoxelEngine.Rendering;
 
-namespace VoxelEngine.Gameplay
+namespace VoxelProgram
 {
     public class ChunkManager
     {
@@ -9,7 +9,7 @@ namespace VoxelEngine.Gameplay
         {
             public Vector3 vPosition;
 
-            public unsafe Cube(byte x, byte y, byte z)
+            public Cube(byte x, byte y, byte z)
             {
                 vPosition.X = x;
                 vPosition.Y = y;
@@ -65,7 +65,7 @@ namespace VoxelEngine.Gameplay
 
         public ChunkManager(Renderer renderer)
         {
-            _chunk = new Chunk(1, 1, 1);
+            _chunk = new Chunk(10, 10, 10);
             _chunk.Transform.Position = new Vector3(0, 0, -5);
             _renderer = renderer;
         }

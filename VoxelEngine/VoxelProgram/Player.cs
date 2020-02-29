@@ -3,7 +3,7 @@ using OpenToolkit.Mathematics;
 using VoxelEngine.Platforms;
 using VoxelEngine.Rendering;
 
-namespace VoxelEngine.Gameplay
+namespace VoxelProgram
 {
     public sealed class Player
     {
@@ -11,7 +11,7 @@ namespace VoxelEngine.Gameplay
         
         public Camera Camera { get; }
 
-        public Player(in IWindow window)
+        public Player(in Window window)
         {
             _input = window.Input;
             Camera = new Camera(Vector3.Zero, (float)window.Width / window.Height);

@@ -4,10 +4,10 @@ using OpenToolkit.Mathematics;
 
 namespace VoxelEngine.Platforms.Glfw
 {
-    public sealed class GlfwWindow : IWindow
+    internal sealed class GlfwWindow : IWindow
     {
         private static int _windowCount = 0;
-        private readonly unsafe Window* _windowHandle;
+        private readonly unsafe OpenToolkit.GraphicsLibraryFramework.Window* _windowHandle;
         
         public unsafe GlfwWindow()
         {
@@ -48,6 +48,10 @@ namespace VoxelEngine.Platforms.Glfw
                 return new Vector2i(w, h);
             }
         }
+
+        public int Width => Size.Y;
+        
+        public int Height => Size.X;
 
         private unsafe void ReleaseUnmanagedResources()
         {

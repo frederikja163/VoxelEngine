@@ -2,33 +2,17 @@
 using System.Diagnostics;
 using System.Drawing;
 using System.Threading;
-using VoxelEngine.Gameplay;
-using VoxelEngine.Layers;
-using VoxelEngine.Platforms;
-using VoxelEngine.Rendering;
 
-/*
- * TODO-list:
- * Chunks
- * Chunk batching
- * Multiple chunks
- * Render distance
- * Multiplayer
- */
-
-
-namespace VoxelEngine
+namespace VoxelEngine.Core
 {
     public class Application : IDisposable
     {
         private readonly AppData _appData;
-        private readonly IState _state;
+        public IState State { get; set; }
         
-        public Application()
+        public Application(AppData appData)
         {
-            _appData = new AppData(Platform.CreateWindow(PlatformApi.GlfwDesktop),
-                new Renderer(RenderingApi.OpenGl));
-            _state = new GameState(_appData);
+            _appData = appData;
         }
 
         public void Run()
@@ -40,13 +24,13 @@ namespace VoxelEngine
 
         private void RunUpdate()
         {
-            _state.UpdateThreadInitialize();
             Stopwatch watch = Stopwatch.StartNew();
             while (_appData.Window.IsRunning)
             {
                 float deltaT = (float)watch.ElapsedTicks / Stopwatch.Frequency;
                 watch.Restart();
-                _state.UpdateThreadTick(deltaT);
+                
+                State.Update(deltaT);
             }
         }
 
@@ -56,12 +40,12 @@ namespace VoxelEngine
             _appData.Renderer.LoadBindings(_appData.Window);
             _appData.Renderer.ClearColor = Color.Aqua;
             
-            _state.RenderThreadInitialize();
+            State.Initialize(_appData);
             while (_appData.Window.IsRunning)
             {
                 _appData.Renderer.Clear();
                 
-                _state.RenderThreadTick();
+                State.Render();
                 
                 _appData.Window.SwapBuffers();
             }
@@ -77,7 +61,7 @@ namespace VoxelEngine
 
         public void Dispose()
         {
-            _state.Dispose();
+            State.Dispose();
             _appData.Window.Dispose();
         }
     }

@@ -5,7 +5,7 @@ using OpenToolkit.Mathematics;
 
 namespace VoxelEngine.Platforms
 {
-    public interface IWindow : IDisposable, IBindingsContext
+    internal interface IWindow : IDisposable, IBindingsContext
     {
         public bool IsRunning { get; set; }
         
@@ -15,10 +15,10 @@ namespace VoxelEngine.Platforms
         
         public void SwapBuffers();
         
-        public Vector2i Size { get => new Vector2i(Width, Height); }
+        public Vector2i Size { get; }
 
-        public int Width => Size.X;
+        public int Width { get; }
 
-        public int Height => Size.Y;
+        public int Height { get; }
     }
 }

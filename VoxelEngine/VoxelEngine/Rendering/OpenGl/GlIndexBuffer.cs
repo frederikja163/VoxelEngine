@@ -2,7 +2,7 @@
 
 namespace VoxelEngine.Rendering.OpenGl
 {
-    public sealed class GlIndexBuffer<TType> : IIndexBuffer<TType>
+    internal sealed class GlIndexBuffer<TType> : IIndexBuffer<TType>
         where TType : unmanaged
     {
         private readonly int _handle;

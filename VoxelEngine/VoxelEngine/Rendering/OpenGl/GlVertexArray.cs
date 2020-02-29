@@ -3,7 +3,7 @@ using OpenToolkit.Graphics.OpenGL4;
 
 namespace VoxelEngine.Rendering.OpenGl
 {
-    public sealed class GlVertexArray<TVertex, TIndex> : IVertexArray<TVertex, TIndex>
+    internal sealed class GlVertexArray<TVertex, TIndex> : IVertexArray<TVertex, TIndex>
         where TVertex : unmanaged
         where TIndex : unmanaged
     {

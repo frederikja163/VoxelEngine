@@ -1,11 +1,10 @@
-﻿using System.Diagnostics;
-using System.Drawing;
+﻿using System.Drawing;
 using OpenToolkit;
 using OpenToolkit.Graphics.OpenGL4;
 
 namespace VoxelEngine.Rendering.OpenGl
 {
-    public sealed class GlRenderer : IRenderer
+    internal sealed class GlRenderer : IRenderer
     {
         public GlRenderer()
         {

@@ -3,7 +3,7 @@ using OpenToolkit;
 
 namespace VoxelEngine.Rendering
 {
-    public interface IRenderer
+    internal interface IRenderer
     {
         public void LoadBindings(IBindingsContext context);
         

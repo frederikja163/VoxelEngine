@@ -6,7 +6,7 @@ using OpenToolkit.Graphics.OpenGL4;
 
 namespace VoxelEngine.Rendering.OpenGl
 {
-    public class GlShader : IShader
+    internal class GlShader : IShader
     {
         private readonly int _handle;
 
