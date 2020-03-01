@@ -41,8 +41,13 @@ namespace VoxelEngine.Core
             _appData.Renderer.ClearColor = Color.Aqua;
             
             State.Initialize(_appData);
+            float deltaT = 0;
+            Stopwatch watch = Stopwatch.StartNew();
+            Timer timer = new Timer((_) => _appData.Window.Title = "frame time [s]:" + deltaT, null, 1000, 1000);
             while (_appData.Window.IsRunning)
             {
+                deltaT = (float)watch.ElapsedTicks / Stopwatch.Frequency;
+                watch.Restart();
                 _appData.Renderer.Clear();
                 
                 State.Render();

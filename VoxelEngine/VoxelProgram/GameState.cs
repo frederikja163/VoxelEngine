@@ -8,8 +8,8 @@ namespace VoxelProgram
     {
         private readonly Window _window;
         private readonly Renderer _renderer;
-        private readonly Player _player;
-        private readonly ChunkManager _chunkManager;
+        private Player _player;
+        private ChunkManager _chunkManager;
 
         public GameState(AppData appData)
         {
@@ -23,18 +23,17 @@ namespace VoxelProgram
                 } 
             };
             _renderer = appData.Renderer;
-            
-            _player = new Player(_window);
-            _chunkManager = new ChunkManager(_renderer);
         }
         
         public void Update(float deltaT)
         {
-            _player.Update(deltaT);
+            _player?.Update(deltaT);
         }
 
         public void Initialize(AppData data)
         {
+            _player = new Player(_window, _renderer);
+            _chunkManager = new ChunkManager(_renderer);
             _renderer.Camera = _player.Camera;
             _chunkManager.Initialize();
         }

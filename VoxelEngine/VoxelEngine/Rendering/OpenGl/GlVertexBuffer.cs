@@ -5,23 +5,22 @@ namespace VoxelEngine.Rendering.OpenGl
     internal sealed class GlVertexBuffer<TType> : IVertexBuffer<TType>
         where TType : unmanaged
     {
-        private readonly int _handle;
+        internal readonly int Handle;
         
         public unsafe GlVertexBuffer(TType[] data)
         {
-            _handle = GL.GenBuffer();
-            Bind();
-            GL.BufferData(BufferTarget.ArrayBuffer, data.Length * sizeof(TType), data, BufferUsageHint.StaticDraw);
+            GL.CreateBuffers(1, out Handle);
+            GL.NamedBufferData(Handle, data.Length * sizeof(TType), data, BufferUsageHint.StaticDraw);
         }
 
         public void Bind()
         {
-            GL.BindBuffer(BufferTarget.ArrayBuffer, _handle);
+            GL.BindBuffer(BufferTarget.ArrayBuffer, Handle);
         }
 
         public void Dispose()
         {
-            GL.DeleteBuffer(_handle);
+            GL.DeleteBuffer(Handle);
         }
     }
 }

@@ -7,9 +7,9 @@ namespace VoxelEngine.Rendering
 {
     public class Renderer : IRenderer
     {
-        private IRenderer _rendererImplementation;
+        private readonly IRenderer _rendererImplementation;
 
-        public Camera Camera { get; set; }
+        public Camera2 Camera { get; set; }
         
         public Renderer(RenderingApi renderingApi)
         {
@@ -34,6 +34,11 @@ namespace VoxelEngine.Rendering
         public void Clear()
         {
             _rendererImplementation.Clear();
+        }
+
+        public IUniformBuffer<T> CreateUniformBuffer<T>(T[] data) where T : unmanaged
+        {
+            return _rendererImplementation.CreateUniformBuffer(data);
         }
 
         public IVertexBuffer<TType> CreateVertexBuffer<TType>(TType[] data) where TType : unmanaged
@@ -70,8 +75,8 @@ namespace VoxelEngine.Rendering
         public void Submit<TVertex, TIndex>(IShader shader, IVertexArray<TVertex, TIndex> vertexArray) where TVertex : unmanaged where TIndex : unmanaged
         {
             shader.Bind();
-            shader.SetUniform("uView", Camera.CreateViewMatrix());
-            shader.SetUniform("uProjection", Camera.CreateProjectionMatrix());
+            shader.SetUniform("uView", Camera.Data.View);
+            shader.SetUniform("uProjection", Camera.Data.Projection);
             _rendererImplementation.Submit(shader, vertexArray);
         }
     }

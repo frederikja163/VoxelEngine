@@ -35,6 +35,7 @@
         </e>
         <e p="Rendering" t="Include">
           <e p="Camera.cs" t="Include" />
+          <e p="Camera2.cs" t="Include" />
           <e p="IIndexBuffer.cs" t="Include" />
           <e p="IRenderer.cs" t="Include" />
           <e p="IShader.cs" t="Include" />

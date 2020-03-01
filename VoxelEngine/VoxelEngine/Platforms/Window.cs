@@ -46,6 +46,11 @@ namespace VoxelEngine.Platforms
         }
 
         public Vector2i Size => _windowImplementation.Size;
+        public string Title
+        {
+            get => _windowImplementation.Title;
+            set => _windowImplementation.Title = value;
+        }
 
         public int Width => _windowImplementation.Width;
 

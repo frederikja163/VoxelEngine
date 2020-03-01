@@ -7,7 +7,7 @@ namespace VoxelEngine.Rendering.OpenGl
         where TVertex : unmanaged
         where TIndex : unmanaged
     {
-        private readonly int _handle;
+        internal readonly int Handle;
         
         public GlVertexBuffer<TVertex> GlVbo { get; }
 
@@ -25,7 +25,7 @@ namespace VoxelEngine.Rendering.OpenGl
             GlIbo = indices;
             Layout = layout;
 
-            _handle = GL.GenVertexArray();
+            Handle = GL.GenVertexArray();
             Bind();
             Vbo.Bind();
             Ibo.Bind();
@@ -48,12 +48,12 @@ namespace VoxelEngine.Rendering.OpenGl
         
         public void Bind()
         {
-            GL.BindVertexArray(_handle);
+            GL.BindVertexArray(Handle);
         }
 
         public void Dispose()
         {
-            GL.DeleteVertexArray(_handle);
+            GL.DeleteVertexArray(Handle);
         }
 
         private VertexAttribPointerType GetAttribType(LayoutType type)

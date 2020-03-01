@@ -9,17 +9,17 @@ namespace VoxelProgram
     {
         private readonly IInput _input;
         
-        public Camera Camera { get; }
+        public Camera2 Camera { get; }
 
-        public Player(in Window window)
+        public Player(in Window window, in Renderer renderer)
         {
             _input = window.Input;
-            Camera = new Camera(Vector3.Zero, (float)window.Width / window.Height);
-            
+            Camera = new Camera2((float)window.Width / window.Height, renderer);
+
             _input.MouseMoved += mouseDelta =>
             {
                 Camera.Pitch += mouseDelta.Y / 100;
-                Camera.Yaw -= mouseDelta.X / 100;
+                Camera.Yaw += mouseDelta.X / 100;
             };
         }
 

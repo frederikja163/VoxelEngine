@@ -34,6 +34,11 @@ namespace VoxelEngine.Rendering.OpenGl
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
         }
 
+        public IUniformBuffer<T> CreateUniformBuffer<T>(T[] data) where T : unmanaged
+        {
+            return new GlUniformBuffer<T>(data);
+        }
+
         public IVertexBuffer<TType> CreateVertexBuffer<TType>(TType[] data)
             where TType : unmanaged
         {

@@ -10,6 +10,8 @@ namespace VoxelEngine.Rendering
 
         public int GetAttributeLocation(string attribute);
 
+        public void SetUniform<T>(IUniformBuffer<T> buffer) where T : unmanaged;
+        
         public void SetUniform(string name, byte value);
         public void SetUniform(string name, short value);
         public void SetUniform(string name, int value);

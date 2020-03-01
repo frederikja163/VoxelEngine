@@ -10,32 +10,36 @@ namespace VoxelEngine.Rendering
         public Color ClearColor { get; set; }
 
         public void Clear();
-
-        public IVertexBuffer<TType> CreateVertexBuffer<TType>(TType[] data)
-            where TType : unmanaged;
         
-        public IIndexBuffer<TType> CreateIndexBuffer<TType>(TType[] data)
-            where TType : unmanaged;
-
-        public IVertexArray<TVertex, TIndex> CreateVertexArray<TVertex, TIndex>(
-            TVertex[] vertices,
-            TIndex[] indices,
-            Layout layout)
-                where TVertex : unmanaged
-                where TIndex : unmanaged;
+        //TODO: use params
+        public IUniformBuffer<T> CreateUniformBuffer<T>(T[] data)
+            where T : unmanaged;
         
-        public IVertexArray<TVertex, TIndex> CreateVertexArray<TVertex, TIndex>(IVertexBuffer<TVertex> vertices,
-            IIndexBuffer<TIndex> indices,
+        public IVertexBuffer<T> CreateVertexBuffer<T>(T[] data)
+            where T : unmanaged;
+        
+        public IIndexBuffer<T> CreateIndexBuffer<T>(T[] data)
+            where T : unmanaged;
+
+        public IVertexArray<T1, T2> CreateVertexArray<T1, T2>(
+            T1[] vertices,
+            T2[] indices,
             Layout layout)
-                where TVertex : unmanaged
-                where TIndex : unmanaged;
+                where T1 : unmanaged
+                where T2 : unmanaged;
+        
+        public IVertexArray<T1, T2> CreateVertexArray<T1, T2>(IVertexBuffer<T1> vertices,
+            IIndexBuffer<T2> indices,
+            Layout layout)
+                where T1 : unmanaged
+                where T2 : unmanaged;
 
         public IShader CreateShader(string vertexPath, string fragmentPath);
         
         public IShader CreateShader(string vertexPath, string geometryPath, string fragmentPath);
         
-        public void Submit<TVertex, TIndex>(IShader shader, IVertexArray<TVertex, TIndex> vertexArray)
-            where TVertex : unmanaged
-            where TIndex : unmanaged;
+        public void Submit<T1, T2>(IShader shader, IVertexArray<T1, T2> vertexArray)
+            where T1 : unmanaged
+            where T2 : unmanaged;
     }
 }

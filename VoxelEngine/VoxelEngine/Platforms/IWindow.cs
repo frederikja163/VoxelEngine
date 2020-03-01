@@ -16,6 +16,8 @@ namespace VoxelEngine.Platforms
         public void SwapBuffers();
         
         public Vector2i Size { get; }
+        
+        public string Title { get; set; }
 
         public int Width { get; }
 

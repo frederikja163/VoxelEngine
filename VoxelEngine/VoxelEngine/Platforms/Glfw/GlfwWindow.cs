@@ -9,6 +9,8 @@ namespace VoxelEngine.Platforms.Glfw
         private static int _windowCount = 0;
         private readonly unsafe OpenToolkit.GraphicsLibraryFramework.Window* _windowHandle;
         
+        private string _title = "voxel engine";
+        
         public unsafe GlfwWindow()
         {
             if (_windowCount++ == 0)
@@ -16,7 +18,6 @@ namespace VoxelEngine.Platforms.Glfw
                 GLFW.Init();
             }
             _windowHandle = GLFW.CreateWindow(1028, 720, "voxel engine", null, null);
-            GLFW.SwapInterval(1);
             
             Input = new GlfwInput(_windowHandle);
         }
@@ -32,6 +33,7 @@ namespace VoxelEngine.Platforms.Glfw
         public unsafe void MakeCurrent()
         {
             GLFW.MakeContextCurrent(_windowHandle);
+            GLFW.SwapInterval(0);
         }
 
         public unsafe void SwapBuffers()
@@ -49,9 +51,19 @@ namespace VoxelEngine.Platforms.Glfw
             }
         }
 
-        public int Width => Size.Y;
+        public unsafe string Title
+        {
+            get => _title;
+            set
+            {
+                _title = value;
+                GLFW.SetWindowTitle(_windowHandle, _title);
+            }
+        }
+
+        public int Width => Size.X;
         
-        public int Height => Size.X;
+        public int Height => Size.Y;
 
         private unsafe void ReleaseUnmanagedResources()
         {

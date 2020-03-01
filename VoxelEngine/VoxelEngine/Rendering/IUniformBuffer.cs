@@ -1,7 +1,9 @@
-﻿namespace VoxelEngine.Rendering
+﻿using System;
+
+namespace VoxelEngine.Rendering
 {
-    public interface IUniformBuffer
+    public interface IUniformBuffer<T> : IDisposable where T : unmanaged
     {
-        void Bind();
+        public string Name { get; set; }
     }
 }

@@ -7,13 +7,13 @@ namespace VoxelProgram
     {
         private struct Cube
         {
-            public Vector3 vPosition;
+            public Vector3 VPosition;
 
             public Cube(byte x, byte y, byte z)
             {
-                vPosition.X = x;
-                vPosition.Y = y;
-                vPosition.Z = z;
+                VPosition.X = x;
+                VPosition.Y = y;
+                VPosition.Z = z;
             }
         }
         

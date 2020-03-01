@@ -5,26 +5,25 @@ namespace VoxelEngine.Rendering.OpenGl
     internal sealed class GlIndexBuffer<TType> : IIndexBuffer<TType>
         where TType : unmanaged
     {
-        private readonly int _handle;
+        internal readonly int Handle;
         
-        public unsafe GlIndexBuffer(TType[] data)
+        public unsafe GlIndexBuffer(params TType[] data)
         {
             Size = data.Length;
-            _handle = GL.GenBuffer();
-            Bind();
-            GL.BufferData(BufferTarget.ElementArrayBuffer, data.Length * sizeof(TType), data, BufferUsageHint.StaticDraw);
+            GL.CreateBuffers(1, out Handle);
+            GL.NamedBufferData(Handle, data.Length * sizeof(TType), data, BufferUsageHint.StaticDraw);
         }
         
         public int Size { get; }
 
         public void Bind()
         {
-            GL.BindBuffer(BufferTarget.ElementArrayBuffer, _handle);
+            GL.BindBuffer(BufferTarget.ElementArrayBuffer, Handle);
         }
 
         public void Dispose()
         {
-            GL.DeleteBuffer(_handle);
+            GL.DeleteBuffer(Handle);
         }
     }
 }
