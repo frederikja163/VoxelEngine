@@ -1,4 +1,5 @@
-﻿using OpenToolkit.Mathematics;
+﻿﻿using System;
+ using OpenToolkit.Mathematics;
 using Quaternion = OpenToolkit.Mathematics.Quaternion;
 using Vector3 = OpenToolkit.Mathematics.Vector3;
 
@@ -15,19 +16,20 @@ namespace VoxelEngine.Rendering
 
         public CamData Data;
 
-        public IUniformBuffer<CamData> UniformBuffer;
-
-        private float _yaw;
+        private float _yaw = -(float)Math.PI / 2f;
         private float _pitch;
         private float _fov = 1;
         private float _aspectRatio;
 
+        private Vector3 _front;
+        private Vector3 _right;
+        private Vector3 _up;
+
         public Camera2(float aspectRatio, Renderer renderer)
-        {
-            UniformBuffer = renderer.CreateUniformBuffer(new CamData[] {Data});
-            
+        {   
             _aspectRatio = aspectRatio;
-            Data = new CamData();
+            Data = new CamData {Position = Vector3.UnitZ * 5};
+
             CalculateProjection();
             CalculateView();
         }
@@ -56,7 +58,7 @@ namespace VoxelEngine.Rendering
             get => _pitch;
             set
             {
-                _pitch = value;
+                _pitch = Math.Clamp(value, -MathF.PI / 2.1f, MathF.PI / 2.1f);
                 CalculateView();;
             } 
         }
@@ -81,11 +83,11 @@ namespace VoxelEngine.Rendering
             }
         }
 
-        public Vector3 Right =>  Quaternion.FromEulerAngles(_pitch, _yaw, 0) * -Vector3.UnitX;
+        public Vector3 Right =>  _right;
         
-        public Vector3 Front =>  Quaternion.FromEulerAngles(_pitch, _yaw, 0) * Vector3.UnitZ;
+        public Vector3 Front =>  _front;
         
-        public Vector3 Up =>  Vector3.UnitY;
+        public Vector3 Up =>  _up;
 
         private void CalculateProjection()
         {
@@ -94,6 +96,15 @@ namespace VoxelEngine.Rendering
 
         private void CalculateView()
         {
+            _front.X = MathF.Cos(_pitch) * MathF.Cos(_yaw);
+            _front.Y = MathF.Sin(_pitch);
+            _front.Z = MathF.Cos(_pitch) * MathF.Sin(_yaw);
+            
+            _front.Normalize();
+            
+            _right = Vector3.Normalize(Vector3.Cross(_front, Vector3.UnitY));
+            _up = Vector3.Normalize(Vector3.Cross(_right, _front));
+
             Data.View = Matrix4.LookAt(Data.Position, Data.Position + Front, Up);
         }
     }

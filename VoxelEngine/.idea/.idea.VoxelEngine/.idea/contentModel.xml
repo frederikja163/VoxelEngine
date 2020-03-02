@@ -49,7 +49,6 @@
             <e p="GlIndexBuffer.cs" t="Include" />
             <e p="GlRenderer.cs" t="Include" />
             <e p="GlShader.cs" t="Include" />
-            <e p="GlUniformBuffer.cs" t="Include" />
             <e p="GlVertexArray.cs" t="Include" />
             <e p="GlVertexBuffer.cs" t="Include" />
           </e>

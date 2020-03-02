@@ -44,8 +44,8 @@ namespace VoxelEngine.Rendering.OpenGl
             Handle = GL.CreateProgram();
 
             int vert = CreateShader(vertexPath, ShaderType.VertexShader);
-            int geo= CreateShader(geometryPath, ShaderType.GeometryShader);
-            int frag= CreateShader(fragmentPath, ShaderType.FragmentShader);
+            int geo = CreateShader(geometryPath, ShaderType.GeometryShader);
+            int frag = CreateShader(fragmentPath, ShaderType.FragmentShader);
             
             GL.AttachShader(Handle, vert);
             GL.AttachShader(Handle, geo);
@@ -84,14 +84,6 @@ namespace VoxelEngine.Rendering.OpenGl
         public int GetAttributeLocation(string attribute)
         {
             return GL.GetAttribLocation(Handle, attribute);
-        }
-
-        public void SetUniform<T>(IUniformBuffer<T> buf)
-            where T : unmanaged
-        {
-            GlUniformBuffer<T> buffer = buf as GlUniformBuffer<T>;
-            int loc = GL.GetUniformBlockIndex(Handle, buffer.Name);
-            GL.UniformBlockBinding(Handle, loc, buffer.Handle);
         }
 
         public void SetUniform(string name, byte value)
@@ -182,7 +174,8 @@ namespace VoxelEngine.Rendering.OpenGl
                 throw new ArgumentException($"{name} is not a valid uniform name on the shader.");
             }
             Matrix4 v = value;
-            GL.ProgramUniformMatrix4(Handle, loc, false, ref v);
+            Bind();
+            GL.UniformMatrix4(loc, false, ref v);
         }
     }
 }

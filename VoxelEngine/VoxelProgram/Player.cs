@@ -19,7 +19,7 @@ namespace VoxelProgram
             _input.MouseMoved += mouseDelta =>
             {
                 Camera.Pitch += mouseDelta.Y / 100;
-                Camera.Yaw += mouseDelta.X / 100;
+                Camera.Yaw -= mouseDelta.X / 100;
             };
         }
 

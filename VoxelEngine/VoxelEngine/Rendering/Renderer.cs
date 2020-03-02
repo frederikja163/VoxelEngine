@@ -36,11 +36,6 @@ namespace VoxelEngine.Rendering
             _rendererImplementation.Clear();
         }
 
-        public IUniformBuffer<T> CreateUniformBuffer<T>(T[] data) where T : unmanaged
-        {
-            return _rendererImplementation.CreateUniformBuffer(data);
-        }
-
         public IVertexBuffer<TType> CreateVertexBuffer<TType>(TType[] data) where TType : unmanaged
         {
             return _rendererImplementation.CreateVertexBuffer(data);

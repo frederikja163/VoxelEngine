@@ -12,8 +12,6 @@ namespace VoxelEngine.Rendering
         public void Clear();
         
         //TODO: use params
-        public IUniformBuffer<T> CreateUniformBuffer<T>(T[] data)
-            where T : unmanaged;
         
         public IVertexBuffer<T> CreateVertexBuffer<T>(T[] data)
             where T : unmanaged;

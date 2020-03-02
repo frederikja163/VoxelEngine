@@ -7,13 +7,13 @@ namespace VoxelProgram
     {
         private struct Cube
         {
-            public Vector3 VPosition;
+            public Vector3 vPosition;
 
             public Cube(byte x, byte y, byte z)
             {
-                VPosition.X = x;
-                VPosition.Y = y;
-                VPosition.Z = z;
+                vPosition.X = x;
+                vPosition.Y = y;
+                vPosition.Z = z;
             }
         }
         
@@ -65,8 +65,8 @@ namespace VoxelProgram
 
         public ChunkManager(Renderer renderer)
         {
-            _chunk = new Chunk(10, 10, 10);
-            _chunk.Transform.Position = new Vector3(0, 0, -5);
+            _chunk = new Chunk(4, 4, 4);
+            _chunk.Transform.Position = new Vector3(0, 0, 0);
             _renderer = renderer;
         }
 

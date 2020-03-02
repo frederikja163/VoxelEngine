@@ -9,8 +9,9 @@ namespace VoxelEngine.Rendering.OpenGl
         
         public unsafe GlVertexBuffer(TType[] data)
         {
-            GL.CreateBuffers(1, out Handle);
-            GL.NamedBufferData(Handle, data.Length * sizeof(TType), data, BufferUsageHint.StaticDraw);
+            Handle = GL.GenBuffer();
+            Bind();
+            GL.BufferData(BufferTarget.ArrayBuffer, data.Length * sizeof(TType), data, BufferUsageHint.StaticDraw);
         }
 
         public void Bind()

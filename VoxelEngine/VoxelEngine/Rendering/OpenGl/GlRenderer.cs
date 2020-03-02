@@ -34,11 +34,6 @@ namespace VoxelEngine.Rendering.OpenGl
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
         }
 
-        public IUniformBuffer<T> CreateUniformBuffer<T>(T[] data) where T : unmanaged
-        {
-            return new GlUniformBuffer<T>(data);
-        }
-
         public IVertexBuffer<TType> CreateVertexBuffer<TType>(TType[] data)
             where TType : unmanaged
         {
@@ -86,8 +81,7 @@ namespace VoxelEngine.Rendering.OpenGl
         public void Submit<TVertex, TIndex>(IShader shader, IVertexArray<TVertex, TIndex> vertexArray) where TVertex : unmanaged where TIndex : unmanaged
         {
             GlIndexBuffer<TIndex> ibo = (vertexArray as GlVertexArray<TVertex, TIndex>)?.GlIbo;
-
-            shader.Bind();
+            
             vertexArray.Bind();
             GL.DrawElements(PrimitiveType.Points, ibo.Size, DrawElementsType.UnsignedInt, 0);
         }
