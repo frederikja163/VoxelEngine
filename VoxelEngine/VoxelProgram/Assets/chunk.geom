@@ -1,44 +1,58 @@
 #version 330 core
 layout (points) in;
-layout (triangle_strip, max_vertices = 24) out;
+layout (triangle_strip, max_vertices = 12) out;
 
-uniform mat4 uProjection = mat4(1);
-uniform mat4 uView = mat4(1);
+struct Camera{
+    mat4 Projection;
+    mat4 View;
+    vec3 Position;
+};
+uniform Camera UCamera = Camera(mat4(1), mat4(1), vec3(0));
 
-out vec4 fColor;
+uniform mat4 UProjection = mat4(1);
+uniform mat4 UView = mat4(1);
+uniform vec3 UPosition = vec3(0, 0, 0);
+
+out vec4 FColor;
 
 void main()
 {
-    fColor = vec4(gl_in[0].gl_Position.xyz / 10f, 1);
+    //FColor = vec4(gl_in[0].gl_Position.xyz / 2, 1);
+    FColor = vec4(UCamera.Position, 1);
+    //FColor = vec4(1);
     
-    gl_Position = uProjection * uView * (gl_in[0].gl_Position + vec4(0.5f, 0.5f, 0.5f, 1f));
-    EmitVertex();
-    gl_Position = uProjection * uView * (gl_in[0].gl_Position + vec4(0.5f, -0.5f, 0.5f, 1f));
-    EmitVertex();
-    gl_Position = uProjection * uView * (gl_in[0].gl_Position + vec4(-0.5f, 0.5f, 0.5f, 1f));
-    EmitVertex();
-    gl_Position = uProjection * uView * (gl_in[0].gl_Position + vec4(-0.5f, -0.5f, 0.5f, 1f));
-    EmitVertex();
-//    gl_Position = uProjection * uView * (gl_in[0].gl_Position + vec4(-0.5f, -0.5f, -0.5f, 1f));
-//    EmitVertex();
-//    gl_Position = uProjection * uView * (gl_in[0].gl_Position + vec4(0.5f, -0.5f, 0.5f, 1f));
-//    EmitVertex();
-//    gl_Position = uProjection * uView * (gl_in[0].gl_Position + vec4(0.5f, -0.5f, -0.5f, 1f));
-//    EmitVertex();
-//    gl_Position = uProjection * uView * (gl_in[0].gl_Position + vec4(0.5f, 0.5f, 0.5f, 1f));
-//    EmitVertex();
-//    gl_Position = uProjection * uView * (gl_in[0].gl_Position + vec4(0.5f, 0.5f, -0.5f, 1f));
-//    EmitVertex();
-//    gl_Position = uProjection * uView * (gl_in[0].gl_Position + vec4(-0.5f, 0.5f, 0.5f, 1f));
-//    EmitVertex();
-//    gl_Position = uProjection * uView * (gl_in[0].gl_Position + vec4(-0.5f, 0.5f, -0.5f, 1f));
-//    EmitVertex();
-//    gl_Position = uProjection * uView * (gl_in[0].gl_Position + vec4(-0.5f, -0.5f, -0.5f, 1f));
-//    EmitVertex();
-//    gl_Position = uProjection * uView * (gl_in[0].gl_Position + vec4(0.5f, -0.5f, -0.5f, 1f));
-//    EmitVertex();
-//    gl_Position = uProjection * uView * (gl_in[0].gl_Position + vec4(0.5f, 0.5f, -0.5f, 1f));
-//    EmitVertex();
+    vec3 relPosition = UCamera.Position + vec3(0.25) - gl_in[0].gl_Position.xyz;
+    float x = sign(relPosition.x) / 2;
+    float y = sign(relPosition.y) / 2;
+    float z = sign(relPosition.z) / 2;
     
+    gl_Position = UCamera.Projection * UCamera.View * (gl_in[0].gl_Position + vec4(x, y, z, 1));
+    EmitVertex();
+    gl_Position = UCamera.Projection * UCamera.View * (gl_in[0].gl_Position + vec4(-x, y, z, 1));
+    EmitVertex();
+    gl_Position = UCamera.Projection * UCamera.View * (gl_in[0].gl_Position + vec4(x, y, -z, 1));
+    EmitVertex();
+    gl_Position = UCamera.Projection * UCamera.View * (gl_in[0].gl_Position + vec4(-x, y, -z, 1));
+    EmitVertex();
+    EndPrimitive();
+
+    gl_Position = UCamera.Projection * UCamera.View * (gl_in[0].gl_Position + vec4(x, y, z, 1));
+    EmitVertex();
+    gl_Position = UCamera.Projection * UCamera.View * (gl_in[0].gl_Position + vec4(x, -y, z, 1));
+    EmitVertex();
+    gl_Position = UCamera.Projection * UCamera.View * (gl_in[0].gl_Position + vec4(x, y, -z, 1));
+    EmitVertex();
+    gl_Position = UCamera.Projection * UCamera.View * (gl_in[0].gl_Position + vec4(x, -y, -z, 1));
+    EmitVertex();
+    EndPrimitive();
+
+    gl_Position = UCamera.Projection * UCamera.View * (gl_in[0].gl_Position + vec4(x, y, z, 1));
+    EmitVertex();
+    gl_Position = UCamera.Projection * UCamera.View * (gl_in[0].gl_Position + vec4(-x, y, z, 1));
+    EmitVertex();
+    gl_Position = UCamera.Projection * UCamera.View * (gl_in[0].gl_Position + vec4(x, -y, z, 1));
+    EmitVertex();
+    gl_Position = UCamera.Projection * UCamera.View * (gl_in[0].gl_Position + vec4(-x, -y, z, 1));
+    EmitVertex();
     EndPrimitive();
 }

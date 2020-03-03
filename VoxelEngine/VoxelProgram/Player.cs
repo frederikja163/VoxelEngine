@@ -53,16 +53,6 @@ namespace VoxelProgram
             {
                 dir.Y -= 1;
             }
-
-            if (_input[Key.Control] == KeyState.Down)
-            {
-                dir *= 2f;
-                Camera.Fov = (float)Math.PI / 2.1f;
-            }
-            else
-            {
-                Camera.Fov = (float) Math.PI / 2f;
-            }
             
             Camera.Position += dir * deltaT;
         }

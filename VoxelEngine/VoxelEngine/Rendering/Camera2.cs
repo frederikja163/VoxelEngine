@@ -28,7 +28,7 @@ namespace VoxelEngine.Rendering
         public Camera2(float aspectRatio, Renderer renderer)
         {   
             _aspectRatio = aspectRatio;
-            Data = new CamData {Position = Vector3.UnitZ * 5};
+            Data = new CamData();
 
             CalculateProjection();
             CalculateView();

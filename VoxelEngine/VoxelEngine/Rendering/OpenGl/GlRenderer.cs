@@ -15,6 +15,7 @@ namespace VoxelEngine.Rendering.OpenGl
         {
             GL.LoadBindings(context);
             GL.Enable(EnableCap.DepthTest);
+            //GL.Enable(EnableCap.CullFace);
         }
 
         private Color _clearColor;

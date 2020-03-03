@@ -86,90 +86,90 @@ namespace VoxelEngine.Rendering.OpenGl
             return GL.GetAttribLocation(Handle, attribute);
         }
 
-        public void SetUniform(string name, byte value)
+        public void SetUniform(string name, byte value, bool throwOnError = false)
         {
             int loc = GL.GetUniformLocation(Handle, name);
-            if (loc == -1)
+            if (throwOnError && loc == -1)
             {
                 throw new ArgumentException($"{name} is not a valid uniform name on the shader.");
             }
             GL.ProgramUniform1(Handle, loc, value);
         }
 
-        public void SetUniform(string name, short value)
+        public void SetUniform(string name, short value, bool throwOnError = false)
         {
             int loc = GL.GetUniformLocation(Handle, name);
-            if (loc == -1)
+            if (throwOnError && loc == -1)
             {
                 throw new ArgumentException($"{name} is not a valid uniform name on the shader.");
             }
             GL.ProgramUniform1(Handle, loc, value);
         }
 
-        public void SetUniform(string name, int value)
+        public void SetUniform(string name, int value, bool throwOnError = false)
         {
             int loc = GL.GetUniformLocation(Handle, name);
-            if (loc == -1)
+            if (throwOnError && loc == -1)
             {
                 throw new ArgumentException($"{name} is not a valid uniform name on the shader.");
             }
             GL.ProgramUniform1(Handle, loc, value);
         }
 
-        public void SetUniform(string name, float value)
+        public void SetUniform(string name, float value, bool throwOnError = false)
         {
             int loc = GL.GetUniformLocation(Handle, name);
-            if (loc == -1)
+            if (throwOnError && loc == -1)
             {
                 throw new ArgumentException($"{name} is not a valid uniform name on the shader.");
             }
             GL.ProgramUniform1(Handle, loc, value);
         }
 
-        public void SetUniform(string name, Color4<Rgba> value)
+        public void SetUniform(string name, Color4<Rgba> value, bool throwOnError = false)
         {
             int loc = GL.GetUniformLocation(Handle, name);
-            if (loc == -1)
+            if (throwOnError && loc == -1)
             {
                 throw new ArgumentException($"{name} is not a valid uniform name on the shader.");
             }
             GL.ProgramUniform4(Handle, loc, value);
         }
 
-        public void SetUniform(string name, Vector2 value)
+        public void SetUniform(string name, Vector2 value, bool throwOnError = false)
         {
             int loc = GL.GetUniformLocation(Handle, name);
-            if (loc == -1)
+            if (throwOnError && loc == -1)
             {
                 throw new ArgumentException($"{name} is not a valid uniform name on the shader.");
             }
             GL.ProgramUniform2(Handle, loc, value);
         }
 
-        public void SetUniform(string name, Vector3 value)
+        public void SetUniform(string name, Vector3 value, bool throwOnError = false)
         {
             int loc = GL.GetUniformLocation(Handle, name);
-            if (loc == -1)
+            if (throwOnError && loc == -1)
             {
                 throw new ArgumentException($"{name} is not a valid uniform name on the shader.");
             }
             GL.ProgramUniform3(Handle, loc, value);
         }
 
-        public void SetUniform(string name, Vector4 value)
+        public void SetUniform(string name, Vector4 value, bool throwOnError = false)
         {
             int loc = GL.GetUniformLocation(Handle, name);
-            if (loc == -1)
+            if (throwOnError && loc == -1)
             {
                 throw new ArgumentException($"{name} is not a valid uniform name on the shader.");
             }
             GL.ProgramUniform4(Handle, loc, value);
         }
 
-        public void SetUniform(string name, Matrix4 value)
+        public void SetUniform(string name, Matrix4 value, bool throwOnError = false)
         {
             int loc = GL.GetUniformLocation(Handle, name);
-            if (loc == -1)
+            if (throwOnError && loc == -1)
             {
                 throw new ArgumentException($"{name} is not a valid uniform name on the shader.");
             }

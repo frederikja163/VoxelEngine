@@ -33,7 +33,7 @@ namespace VoxelEngine.Platforms.Glfw
         public unsafe void MakeCurrent()
         {
             GLFW.MakeContextCurrent(_windowHandle);
-            //GLFW.SwapInterval(0);
+            GLFW.SwapInterval(0);
         }
 
         public unsafe void SwapBuffers()

@@ -38,7 +38,7 @@ namespace VoxelEngine.Core
         {
             _appData.Window.MakeCurrent();
             _appData.Renderer.LoadBindings(_appData.Window);
-            _appData.Renderer.ClearColor = Color.Aqua;
+            _appData.Renderer.ClearColor = Color.Black;
             
             State.Initialize(_appData);
             float deltaT = 0;

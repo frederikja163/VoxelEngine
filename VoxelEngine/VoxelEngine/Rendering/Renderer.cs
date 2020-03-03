@@ -70,8 +70,9 @@ namespace VoxelEngine.Rendering
         public void Submit<TVertex, TIndex>(IShader shader, IVertexArray<TVertex, TIndex> vertexArray) where TVertex : unmanaged where TIndex : unmanaged
         {
             shader.Bind();
-            shader.SetUniform("uView", Camera.Data.View);
-            shader.SetUniform("uProjection", Camera.Data.Projection);
+            shader.SetUniform("UCamera.View", Camera.Data.View);
+            shader.SetUniform("UCamera.Projection", Camera.Data.Projection);
+            shader.SetUniform("UCamera.Position", Camera.Data.Position);
             _rendererImplementation.Submit(shader, vertexArray);
         }
     }

@@ -7,13 +7,13 @@ namespace VoxelProgram
     {
         private struct Cube
         {
-            public Vector3 vPosition;
+            public Vector3 VPosition;
 
             public Cube(byte x, byte y, byte z)
             {
-                vPosition.X = x;
-                vPosition.Y = y;
-                vPosition.Z = z;
+                VPosition.X = x;
+                VPosition.Y = y;
+                VPosition.Z = z;
             }
         }
         
@@ -29,11 +29,11 @@ namespace VoxelProgram
 
             public int TotalSize => Width * Height * Depth;
             
-            public Transform Transform { get; }
+            public Vector3 Position { get; set; }
 
             public Chunk(byte width, byte height, byte depth)
             {
-                Transform = new Transform();
+                Position = Vector3.Zero;
                 Width = width;
                 Height = height;
                 Depth = depth;
@@ -65,8 +65,8 @@ namespace VoxelProgram
 
         public ChunkManager(Renderer renderer)
         {
-            _chunk = new Chunk(4, 4, 4);
-            _chunk.Transform.Position = new Vector3(0, 0, 0);
+            _chunk = new Chunk(32, 32, 32);
+            _chunk.Position = new Vector3(0, 0, 0);
             _renderer = renderer;
         }
 
@@ -83,7 +83,7 @@ namespace VoxelProgram
 
         public void Render()
         {
-            _shader.SetUniform("uModel", _chunk.Transform.CreateMatrix());
+            _shader.SetUniform("UPosition", _chunk.Position);
             _renderer.Submit(_shader, _vertexArray);
         }
     }

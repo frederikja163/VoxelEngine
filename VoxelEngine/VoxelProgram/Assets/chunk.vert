@@ -1,9 +1,9 @@
 #version 330 core
-in vec3 vPosition;
+in vec3 VPosition;
 
-uniform mat4 uModel = mat4(1);
+uniform vec3 UPosition = vec3(0);
 
 void main()
 {
-    gl_Position = uModel * vec4(vPosition.x, vPosition.y, vPosition.z, 1);
+    gl_Position =  vec4(VPosition + UPosition, 1);
 }
